@@ -1,0 +1,175 @@
+{
+  "app": {
+    "name": "Cleaner Royall",
+    "description": "Sample ChangeLog Viewer",
+    "icon": "https://raw.githubusercontent.com/AraafRoyall/Cleaner-Royall/main/assets/icon.png",
+    "repository": "https://github.com/AraafRoyall/Cleaner-Royall",
+    "website": "",
+    "developer": "Araaf Royall"
+  },
+
+  "LatestVersion": "v2.1.0",
+
+  "releases": {
+    "v2.1.0": {
+      "date": "2026-10-16",
+      "channel": "stable",
+      "description": "A better cleaning experience with new tools, performance improvements, and important fixes.",
+      "changes": {
+        "new": [
+          "Added a redesigned dashboard",
+          "Added quick cleaning actions",
+          "Added a new storage analysis screen",
+          "Added a large file finder",
+          "Added support for exporting cleaning reports",
+          "Added a confirmation dialog before deleting app groups",
+          "Added customizable dashboard options",
+          "Added a new changelog viewer"
+        ],
+        "fixes": [
+          "Fixed incorrect storage calculations",
+          "Fixed a crash when opening the cleaner without storage permission",
+          "Fixed an issue with app icons not loading correctly",
+          "Fixed incorrect file counts during duplicate detection",
+          "Fixed a layout issue on smaller screens",
+          "Fixed an issue where cancelled scans continued running",
+          "Fixed incorrect progress values during cache scanning",
+          "Fixed an issue with refreshing the application list"
+        ],
+        "general": [
+          "Improved application startup performance",
+          "Updated the dashboard layout",
+          "Reduced unnecessary background processing",
+          "Improved error messages during file scanning",
+          "Optimized memory usage during large scans",
+          "Improved accessibility of interactive elements"
+        ],
+        "security": [
+          "Improved validation of file operation requests",
+          "Added additional checks before destructive operations"
+        ],
+        "performance": [
+          "Optimized scanning of large directories",
+          "Reduced unnecessary file system operations"
+        ],
+        "removed": [
+          "Removed an obsolete cleaning option"
+        ]
+      }
+    },
+
+    "v2.0.0": {
+      "date": "2026-10-10",
+      "channel": "stable",
+      "description": "A major update introducing a refreshed interface and several new cleaning tools.",
+      "changes": {
+        "new": [
+          "Introduced the redesigned dashboard",
+          "Added a dedicated storage cleaner",
+          "Added a large file finder",
+          "Added a duplicate file finder",
+          "Added an application manager",
+          "Added a cleaning history screen",
+          "Added support for selecting multiple files",
+          "Added a quick settings panel"
+        ],
+        "fixes": [
+          "Fixed incorrect storage usage on newer Android versions",
+          "Fixed a crash when scanning empty folders",
+          "Fixed an issue with selecting files from external storage",
+          "Fixed an issue where the back button closed the wrong screen",
+          "Fixed a progress indicator that remained visible after scanning",
+          "Fixed incorrect sorting of file sizes"
+        ],
+        "general": [
+          "Improved application navigation",
+          "Updated colors and typography",
+          "Optimized scanning performance",
+          "Improved compatibility with supported Android versions",
+          "Reduced unnecessary permission checks"
+        ],
+        "breaking": [
+          "Updated the internal configuration format"
+        ]
+      }
+    },
+
+    "v1.9.0": {
+      "date": "2026-10-05",
+      "channel": "stable",
+      "description": "Improved storage scanning reliability and introduced additional file management tools.",
+      "changes": {
+        "new": [
+          "Added a cache cleaning tool",
+          "Added a temporary file finder",
+          "Added a storage overview section",
+          "Added a recent cleaning activity list",
+          "Added an option to exclude selected folders",
+          "Added support for refreshing scan results"
+        ],
+        "fixes": [
+          "Fixed a crash when accessing restricted folders",
+          "Fixed incorrect cache size calculations",
+          "Fixed an issue with file selection after scanning",
+          "Fixed a dialog that remained open after cancelling an operation",
+          "Fixed an issue with refreshing storage information"
+        ],
+        "general": [
+          "Improved scanning reliability",
+          "Updated the storage overview interface",
+          "Improved handling of large directories"
+        ],
+        "performance": [
+          "Optimized file scanning for large storage volumes",
+          "Reduced memory consumption during duplicate detection"
+        ]
+      }
+    },
+
+    "v1.5.0": {
+      "date": "2026-09-01",
+      "channel": "stable",
+      "description": "Introduced the initial set of storage scanning and cleaning tools.",
+      "changes": {
+        "new": [
+          "Added the first storage scanning tool",
+          "Added support for scanning internal storage",
+          "Added a basic cleaning results screen",
+          "Added an option to cancel an active scan"
+        ],
+        "fixes": [
+          "Fixed a crash when storage permission was denied",
+          "Fixed incorrect scan progress",
+          "Fixed an issue with returning to the dashboard during scanning"
+        ],
+        "general": [
+          "Improved initial application loading",
+          "Updated the basic dashboard design"
+        ]
+      }
+    },
+
+    "v1.0.0": {
+      "date": "2026-08-15",
+      "channel": "stable",
+      "description": "The first release of Cleaner Royall.",
+      "changes": {
+        "new": [
+          "Introduced Cleaner Royall",
+          "Added the basic dashboard",
+          "Added a storage information screen",
+          "Added a simple file scanning feature",
+          "Added an application settings screen"
+        ],
+        "fixes": [
+          "Fixed initial dashboard loading",
+          "Fixed an issue with displaying storage information"
+        ],
+        "general": [
+          "Introduced the initial application interface",
+          "Added basic Android storage permission handling"
+        ]
+      }
+    }
+  }
+}
