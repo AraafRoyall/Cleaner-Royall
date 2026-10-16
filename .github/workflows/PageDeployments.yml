@@ -6,7 +6,8 @@ on:
       - main
     paths:
       - "pages/**"
-      - ".github/workflows/pages.yml"
+      - "web/**"
+      - ".github/workflows/PageDeployments.yml"
   workflow_dispatch:
 
 permissions:
@@ -33,11 +34,18 @@ jobs:
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare Website
+        run: |
+          mkdir -p _site
+          cp -a pages/. _site/
+          mkdir -p _site/web
+          cp -a web/. _site/web/
+
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./pages"
-          retention-days: 1
+          path: "./_site"
+          retention-days: 10
 
       - name: Deploy GitHub Pages
         id: deployment
