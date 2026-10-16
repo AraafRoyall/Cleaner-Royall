@@ -1,0 +1,30 @@
+{
+  "app": {
+    "name": "Cleaner Royall",
+    "description": "Changes for Cleaner Royall",
+    "icon": "https://raw.githubusercontent.com/AraafRoyall/Cleaner-Royall/main/assets/icon.png",
+    "repository": "https://github.com/AraafRoyall/Cleaner-Royall",
+    "website": "",
+    "developer": "Araaf Royall"
+  },
+  "title": "Upcoming features",
+  "description": "Ideas planned for future updates. These items may change as development progresses.",
+  "updatedAt": "2026-10-16",
+  "status": "planned",
+  "targetVersion": "",
+  "targetDate": "",
+  "changes": {
+    "new": [
+      "Add scheduled cleaning reminders",
+      "Add more filters for storage and file scans",
+      "Add a detailed cleaning report with before-and-after totals"
+    ],
+    "improved": [
+      "Make large scans easier to monitor with clearer progress details",
+      "Add more customization options for the dashboard"
+    ],
+    "general": [
+      "Continue refining accessibility and small-screen layouts"
+    ]
+  }
+}
