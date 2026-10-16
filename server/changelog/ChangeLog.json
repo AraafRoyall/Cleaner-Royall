@@ -38,7 +38,7 @@
       "changes": {
         "new": [
           "New : Feedback Option",
-          "New : Easy cache wiper API",
+          "New : Easy cache wiper API closes #425",
           "New : Option to mount /data"
         ]
       },
