@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#d9edf3">
+<meta name="color-scheme" content="light">
+<title>Changelog</title>
+<style>
+:root{--bg:#f7f7fc;--surface:#fff;--surface-soft:#f0f0f8;--surface-head:#e3e3ed;--ink:#151922;--muted:#596171;--soft-muted:#7b8290;--line:#c9cbd7;--line-soft:#dcdde7;--teal:#167f79;--teal-deep:#126c68;--teal-wash:#e0f3f0;--blue:#42639a;--blue-wash:#e5ebfb;--green:#2f7545;--green-wash:#e5f5e6;--amber:#936308;--amber-wash:#fff0cc;--red:#b44b4b;--red-wash:#ffebeb;--shadow:0 8px 28px rgba(30,46,67,.055);--radius:21px;--content:780px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Roboto,"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}a{color:inherit}.app-header{position:sticky;top:0;z-index:20;background:#d9edf3;border-radius:0 0 25px 25px;box-shadow:0 3px 14px rgba(30,67,82,.035);padding:calc(22px + env(safe-area-inset-top)) 22px 22px}.app-header-inner{max-width:var(--content);margin:0 auto;display:flex;align-items:center;gap:17px;min-height:78px}.app-icon-wrap{width:70px;height:70px;flex:0 0 70px;position:relative;display:grid;place-items:center;border-radius:0;background:transparent;border:0;overflow:visible;box-shadow:none}.app-icon{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:0;border-radius:0;display:block;visibility:hidden;z-index:2}.app-icon.is-visible{display:block;visibility:visible}.icon-fallback{position:absolute;inset:0;width:70px;height:70px;color:var(--teal);display:grid;place-items:center;z-index:1}.icon-fallback svg{width:48px;height:48px}.app-title-wrap{min-width:0;flex:1}.app-title{font-size:clamp(23px,5.8vw,35px);font-weight:760;letter-spacing:-.85px;line-height:1.13;margin:0;overflow-wrap:anywhere}.app-subtitle{font-size:16px;color:#475363;line-height:1.4;margin:7px 0 0;overflow-wrap:anywhere}.header-meta{display:flex;align-items:center;gap:7px;margin-top:8px;flex-wrap:wrap}.header-meta:empty{display:none}.tiny-meta{font-size:11px;font-weight:650;letter-spacing:.045em;text-transform:uppercase;color:#397276;background:rgba(255,255,255,.55);padding:4px 8px;border-radius:999px}.main{max-width:var(--content);margin:0 auto;padding:25px 17px 190px}.status-line{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 4px 17px;color:var(--muted);font-size:13px}.status-left{display:flex;align-items:center;gap:8px;min-width:0}.status-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex:0 0 auto}.status-dot.loading{background:#c58b20;animation:pulse 1.2s ease-in-out infinite}.status-dot.error{background:var(--red)}.text-button{border:0;background:transparent;color:var(--teal-deep);font-weight:700;padding:6px 0;cursor:pointer}.loading-panel,.error-panel,.empty-panel{border:1px solid var(--line);background:var(--surface);border-radius:20px;padding:22px 20px;box-shadow:var(--shadow)}.loading-title{font-weight:750;font-size:16px}.loading-copy,.error-copy{color:var(--muted);font-size:14px;margin:4px 0 0}.spinner{width:20px;height:20px;border:2px solid #c9e4e2;border-top-color:var(--teal);border-radius:50%;animation:spin .8s linear infinite;flex:0 0 auto}.loading-row{display:flex;align-items:center;gap:13px}.skeleton{height:12px;border-radius:8px;background:linear-gradient(90deg,#efeff6,#f9f9fc,#efeff6);background-size:200% 100%;animation:shine 1.5s linear infinite;margin-top:18px}.skeleton.short{width:58%}.error-title{font-size:17px;font-weight:750;margin:0 0 5px}.error-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.small-action{border:1px solid #b4d9dc;background:#f7fcfc;color:#236e70;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;text-decoration:none;font-size:13px}.timeline{position:relative}.timeline:before{content:"";position:absolute;left:13px;top:22px;bottom:10px;width:3px;border-radius:5px;background:linear-gradient(180deg,#c5c8d5 0%,#d9dae4 86%,rgba(217,218,228,0) 100%)}.release-row{position:relative;display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:16px;margin:0 0 26px}.release-rail{position:relative;display:flex;justify-content:center;align-items:flex-start;padding-top:13px;z-index:1}.release-marker{width:17px;height:17px;border-radius:50%;border:5px solid #828792;background:var(--bg);box-shadow:0 0 0 3px var(--bg);flex:0 0 auto}.release-row.is-latest .release-marker{border-color:var(--green);background:#fff;box-shadow:0 0 0 3px var(--bg)}.release-row.is-prerelease:not(.is-latest) .release-marker{border:2px dashed #9297a1;background:var(--bg);width:17px;height:17px}.release-content{min-width:0}.release-top{display:flex;align-items:flex-start;gap:12px;min-width:0}.release-heading-button{flex:1;min-width:0;text-align:left;display:block;border:0;background:transparent;color:inherit;padding:2px 0 0;cursor:pointer}.version-line{display:flex;align-items:center;flex-wrap:wrap;gap:9px}.version-name{font-size:clamp(18px,4.4vw,23px);font-weight:780;letter-spacing:-.38px;line-height:1.25;overflow-wrap:anywhere}.release-subline{display:block;font-size:14px;color:#151922;margin-top:6px;line-height:1.45}.release-subline span+span:before{content:"·";padding:0 6px;color:#9499a4}.release-chevron{width:36px;height:36px;display:grid;place-items:center;border:0;background:transparent;color:#424958;border-radius:50%;cursor:pointer;margin-top:0;flex:0 0 auto}.release-chevron:hover{background:#ededf5}.release-chevron svg{transition:transform .2s ease}.release-row.is-open .release-chevron svg{transform:rotate(180deg)}.pill{display:inline-flex;align-items:center;gap:5px;font-size:11px;line-height:1;font-weight:750;letter-spacing:.025em;padding:7px 10px;border-radius:999px;white-space:nowrap}.pill-latest{color:#6941a5;background:#eee6ff;border:1px solid #dfd1ff}.pill-stable{color:#2f6f47;background:#e0f3e3}.pill-prerelease{color:#86590d;background:#ffe3ad}.pill-development{color:#31568d;background:#dce7ff}.pill-other{color:#4b5361;background:#e8e9ef}.release-body{padding-top:19px;min-width:0}.release-description{color:#4d5667;font-size:14px;line-height:1.55;margin:0 0 15px;padding:0 2px}.categories{display:flex;flex-direction:column;gap:16px}.category-card{border:1.5px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#f0f0f8;box-shadow:0 1px 0 rgba(34,44,65,.025);min-width:0}.category-head{width:100%;display:flex;align-items:center;gap:11px;padding:12px 13px 12px 15px;background:var(--surface-head);border:0;text-align:left;color:var(--ink);min-height:61px}.category-icon{width:42px;height:42px;flex:0 0 42px;border-radius:14px;display:grid;place-items:center;background:var(--cat-wash,var(--blue-wash));color:var(--cat-color,var(--blue))}.category-icon svg{width:23px;height:23px}.category-name{font-size:16px;font-weight:760;line-height:1.2;flex:1;min-width:0;overflow-wrap:anywhere}.category-count{min-width:35px;height:35px;padding:0 9px;border-radius:50px;display:grid;place-items:center;background:rgba(124,130,149,.15);color:#3e4656;font-size:13px;font-weight:750;font-variant-numeric:tabular-nums}.category-items{background:rgba(255,255,255,.13)}.change-item{display:grid;grid-template-columns:10px minmax(0,1fr);gap:12px;padding:13px 15px 14px;border-top:1px solid #d1d2df;min-width:0}.change-bullet{width:9px;height:9px;border-radius:50%;margin-top:7px;background:var(--cat-color,var(--blue));opacity:.9}.change-copy{min-width:0}.change-scope{font-size:13px;color:#515866;font-weight:730;line-height:1.45;margin-bottom:3px;overflow-wrap:anywhere}.change-text{font-size:15px;line-height:1.52;color:#202531;overflow-wrap:anywhere;word-break:normal}.change-text a{color:var(--blue);text-decoration:none;font-weight:650}.change-text a:hover{text-decoration:underline}.change-reference{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--blue);text-decoration:none;margin-top:6px}.change-reference:hover{text-decoration:underline}.category-footer{padding:10px 15px 12px;border-top:1px solid #d1d2df}.show-items{display:inline-flex;align-items:center;gap:8px;border:0;background:transparent;color:#4d638f;font-size:14px;font-weight:720;padding:0;cursor:pointer}.show-items svg{transition:transform .18s ease}.show-items.expanded svg{transform:rotate(180deg)}.older-label{font-size:14px;font-weight:750;color:#545c6a;margin:2px 0 18px 44px;letter-spacing:.005em}.release-empty{font-size:14px;color:var(--muted);padding:15px}.floating-top{position:fixed;right:max(20px,calc((100vw - var(--content))/2 + 20px));bottom:calc(176px + env(safe-area-inset-bottom));z-index:15;width:48px;height:48px;border:1.5px solid #b5dfe2;border-radius:50%;display:grid;place-items:center;color:#1c555a;background:rgba(250,253,255,.94);box-shadow:0 4px 15px rgba(31,72,85,.1);cursor:pointer;opacity:0;pointer-events:none;transform:translateY(7px);transition:opacity .18s,transform .18s}.floating-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}.floating-top svg{width:22px;height:22px}.bottom-actions{position:fixed;left:0;right:0;bottom:0;z-index:18;padding:13px 18px calc(19px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(247,247,252,0),rgba(247,247,252,.94) 17%,rgba(247,247,252,.99) 42%)}.bottom-actions-inner{max-width:var(--content);margin:0 auto;display:grid;gap:10px}.action-button{width:100%;height:55px;display:flex;align-items:center;justify-content:center;gap:10px;border:1.5px solid #b6dce0;border-radius:19px;background:rgba(250,251,255,.82);color:#232833;font-size:15px;font-weight:720;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}.action-button:active{transform:scale(.99);background:#eff8f9}.action-button svg{width:22px;height:22px}.action-button.primary{background:#f9fbff}.toast{position:fixed;z-index:40;left:50%;bottom:calc(150px + env(safe-area-inset-bottom));transform:translate(-50%,12px);opacity:0;pointer-events:none;background:#222a35;color:#fff;border-radius:13px;padding:11px 15px;font-size:13px;font-weight:600;box-shadow:0 5px 22px rgba(0,0,0,.17);max-width:calc(100vw - 40px);text-align:center;transition:opacity .18s,transform .18s}.toast.visible{opacity:1;transform:translate(-50%,0)}.footer-note{text-align:center;color:#9197a5;font-size:11px;margin-top:20px;padding:0 10px}.not-found{margin:0;padding:15px;border-radius:12px;background:#fff4e2;color:#79520b;font-size:13px}
+.cat-new{--cat-color:#4a6296;--cat-wash:#dce5ff}.cat-fixes{--cat-color:#8a670a;--cat-wash:#ffe2a5}.cat-general{--cat-color:#4f5969;--cat-wash:#e6e7ed}.cat-security{--cat-color:#247b63;--cat-wash:#d9f1e9}.cat-performance{--cat-color:#286fa1;--cat-wash:#dcefff}.cat-breaking{--cat-color:#b24949;--cat-wash:#ffe0e0}.cat-removed{--cat-color:#b24949;--cat-wash:#ffe6e6}.cat-deprecated{--cat-color:#94630b;--cat-wash:#ffedc8}.cat-improved{--cat-color:#207d78;--cat-wash:#d8f1ee}.cat-default{--cat-color:#4d6591;--cat-wash:#e0e7f7}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{opacity:.35}}@keyframes shine{to{background-position:-200% 0}}
+@media(min-width:700px){.app-header{padding:24px 28px 25px}.app-header-inner{min-height:83px}.app-icon-wrap{width:76px;height:76px;flex-basis:76px}.main{padding:31px 25px 195px}.release-row{grid-template-columns:32px minmax(0,1fr);column-gap:18px}.timeline:before{left:15px}.category-head{padding-left:17px;padding-right:16px}.change-item{padding:14px 18px}.app-subtitle{font-size:17px}}
+@media(max-width:370px){.app-header{padding-left:16px;padding-right:16px}.app-header-inner{gap:12px}.app-icon-wrap{width:60px;height:60px;flex-basis:60px}.app-title{font-size:22px;letter-spacing:-.6px}.app-subtitle{font-size:14px}.main{padding-left:12px;padding-right:12px}.release-row{column-gap:10px;grid-template-columns:26px minmax(0,1fr)}.timeline:before{left:12px}.version-name{font-size:18px}.category-head{gap:8px;padding:10px}.category-icon{width:38px;height:38px;flex-basis:38px}.category-name{font-size:15px}.change-item{padding:12px 11px;gap:9px}.change-text{font-size:14px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Final refinements: compact app bar, unmasked icon, single-open release accordion and space-saving footer. */
+.app-header{padding:calc(8px + env(safe-area-inset-top)) 18px 10px;border-radius:0 0 21px 21px}
+.app-header-inner{min-height:70px;gap:14px}
+.app-icon-wrap{position:relative;width:70px;height:70px;flex:0 0 70px;border-radius:0;background:transparent;border:0;overflow:visible;box-shadow:none}
+.app-icon{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:0;border-radius:0;display:block;visibility:hidden;z-index:2}
+.app-icon.is-visible{display:block;visibility:visible}
+.icon-fallback{position:absolute;inset:0;width:70px;height:70px;z-index:1}
+.icon-fallback svg{width:48px;height:48px}
+.app-title-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+.app-title{font-size:clamp(21px,5.2vw,31px);letter-spacing:-.7px}
+.app-subtitle{font-size:14px;line-height:1.35;margin-top:4px}
+.header-meta{margin-top:5px}
+.latest-tag{display:inline-flex;align-items:center;max-width:100%;padding:5px 9px;border-radius:999px;background:#eee6ff;color:#6941a5;border:1px solid #dfd1ff;font-size:11px;font-weight:800;line-height:1.1;letter-spacing:.015em;white-space:nowrap}
+.main{padding-bottom:118px}
+.bottom-actions{padding:8px 14px calc(9px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(247,247,252,0),rgba(247,247,252,.94) 12%,rgba(247,247,252,.99) 38%)}
+.bottom-actions-inner{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.action-button{height:50px;min-width:0;border-radius:16px;font-size:14px;gap:7px;padding:0 10px}
+.action-button svg{width:20px;height:20px;flex:0 0 auto}
+.floating-top{bottom:calc(77px + env(safe-area-inset-bottom))}
+.toast{bottom:calc(72px + env(safe-area-inset-bottom))}
+@media(min-width:700px){.main{padding-bottom:125px}}
+@media(max-width:370px){.app-header{padding-left:14px;padding-right:14px}.app-header-inner{gap:11px}.app-icon-wrap{width:70px;height:70px;flex-basis:70px}.app-title{font-size:21px}.app-subtitle{font-size:13px}.main{padding-bottom:118px}.bottom-actions{padding-left:10px;padding-right:10px}.bottom-actions-inner{gap:8px}.action-button{height:48px;font-size:13px;gap:6px;padding:0 6px}}
+
+
+/* Premium soft category tints and an extensible action bottom sheet. */
+[hidden]{display:none!important}
+.category-card{background:var(--cat-card,#fbfbfe);border-color:var(--cat-line,#dfe1eb)}
+.category-head{background:var(--cat-head,#eff0f7)}
+.category-items{background:var(--cat-card,#fbfbfe)}
+.change-item,.category-footer{border-top-color:var(--cat-line,#e3e5ed)}
+.cat-new{--cat-color:#287744;--cat-wash:#dff3e2;--cat-card:#fbfefb;--cat-head:#eaf7ec;--cat-line:#dcecdf}
+.cat-fixes{--cat-color:#94670d;--cat-wash:#fff0ce;--cat-card:#fffdf8;--cat-head:#fff5df;--cat-line:#eee5d1}
+.cat-general{--cat-color:#40649b;--cat-wash:#e3edff;--cat-card:#fcfdff;--cat-head:#eff4ff;--cat-line:#dfe7f5}
+.cat-security{--cat-color:#26785f;--cat-wash:#dcf2e9;--cat-card:#fbfefc;--cat-head:#eaf7f1;--cat-line:#d9ece3}
+.cat-performance{--cat-color:#286d9e;--cat-wash:#dfefff;--cat-card:#fbfdff;--cat-head:#edf6ff;--cat-line:#dbe9f6}
+.cat-breaking{--cat-color:#b44b4b;--cat-wash:#ffe6e6;--cat-card:#fffafa;--cat-head:#fff0f0;--cat-line:#f1dddd}
+.cat-removed{--cat-color:#b44b4b;--cat-wash:#ffebeb;--cat-card:#fffafa;--cat-head:#fff1f1;--cat-line:#f1dfdf}
+.cat-deprecated{--cat-color:#94670d;--cat-wash:#fff0ce;--cat-card:#fffdf8;--cat-head:#fff6e2;--cat-line:#eee5d1}
+.cat-improved{--cat-color:#207a75;--cat-wash:#ddf3f0;--cat-card:#fbfefd;--cat-head:#ebf8f6;--cat-line:#d9ece9}
+.cat-default{--cat-color:#4d6591;--cat-wash:#e7edfb;--cat-card:#fcfdff;--cat-head:#f0f3fc;--cat-line:#e0e6f2}
+.cat-upcoming{--cat-color:#287b68;--cat-wash:#ddf3ea;--cat-card:#fbfefc;--cat-head:#e9f7f0;--cat-line:#d9ece3}
+.upcoming-panel{margin:0 0 27px 44px;border:1px solid #c8e5dc;border-radius:19px;overflow:hidden;background:#fbfefc;box-shadow:0 3px 14px rgba(37,106,86,.035)}
+.upcoming-toggle{width:100%;display:flex;align-items:center;gap:11px;padding:13px 13px 13px 14px;background:#edf8f3;border:0;text-align:left;color:var(--ink);cursor:pointer;min-width:0}
+.upcoming-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:14px;background:#d9f0e5;color:#267858}
+.upcoming-icon svg{width:23px;height:23px}
+.upcoming-copy{min-width:0;flex:1}
+.upcoming-title-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.upcoming-title{font-size:16px;font-weight:780;line-height:1.2}
+.upcoming-badge{display:inline-flex;align-items:center;padding:5px 8px;border-radius:999px;background:#d7f0e2;color:#26734f;font-size:10px;font-weight:800;letter-spacing:.025em;text-transform:uppercase}
+.upcoming-description{font-size:12px;color:#607267;line-height:1.4;margin:4px 0 0}
+.upcoming-count{min-width:32px;height:32px;padding:0 8px;border-radius:50px;background:#d9eee4;color:#287255;display:grid;place-items:center;font-size:12px;font-weight:800;font-variant-numeric:tabular-nums}
+.upcoming-chevron{color:#426d5e;display:grid;place-items:center;flex:0 0 auto;transition:transform .2s ease}
+.upcoming-panel.is-open .upcoming-chevron{transform:rotate(180deg)}
+.upcoming-content{padding:13px;display:flex;flex-direction:column;gap:13px;background:#fbfefc}
+.upcoming-empty{font-size:13px;color:#607267;padding:8px 4px}
+.bottom-actions{padding:7px 16px calc(9px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(247,247,252,0),rgba(247,247,252,.94) 18%,rgba(247,247,252,.99) 45%)}
+.bottom-actions-inner{display:block}
+.options-trigger{width:100%;max-width:var(--content);margin:0 auto;height:47px;border:1px solid #b8ded8;border-radius:17px;background:rgba(250,254,253,.96);color:#285f59;display:flex;align-items:center;justify-content:center;gap:10px;font-size:14px;font-weight:760;box-shadow:0 4px 17px rgba(31,96,82,.065);cursor:pointer;transition:transform .15s,background .15s}
+.options-trigger:active{transform:scale(.99);background:#edf8f4}
+.options-trigger-icon,.options-trigger-chevron{display:grid;place-items:center}
+.options-trigger-icon svg{width:19px;height:19px}
+.options-trigger-chevron{margin-left:1px}
+.options-trigger-chevron svg{width:18px;height:18px}
+.sheet-overlay{position:fixed;inset:0;z-index:50;background:rgba(21,29,38,.36);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);opacity:0;transition:opacity .22s ease}
+.sheet-overlay.open{opacity:1}
+.action-sheet{position:fixed;z-index:51;left:0;right:0;bottom:0;max-width:620px;margin:0 auto;padding:9px 18px calc(18px + env(safe-area-inset-bottom));background:#fbfbff;border:1px solid #dedfea;border-bottom:0;border-radius:18px 18px 0 0;box-shadow:0 -12px 44px rgba(25,37,54,.17);transform:translateY(105%);transition:transform .26s cubic-bezier(.2,.8,.2,1);max-height:min(82dvh,720px);overflow-y:auto;overscroll-behavior:contain}
+.action-sheet.open{transform:translateY(0)}
+.sheet-handle{width:38px;height:4px;background:#d1d4df;border-radius:99px;margin:0 auto 15px}
+.sheet-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 1px 16px}
+.sheet-heading h2{font-size:19px;line-height:1.25;letter-spacing:-.3px;margin:0;font-weight:800}
+.sheet-heading p{font-size:13px;color:var(--muted);margin:4px 0 0}
+.sheet-close{width:38px;height:38px;flex:0 0 38px;border:0;border-radius:50%;display:grid;place-items:center;background:#eef0f7;color:#50596a;cursor:pointer}
+.sheet-close svg{width:20px;height:20px}
+.sheet-actions{display:flex;flex-direction:column;gap:9px}
+.sheet-action{width:100%;min-height:66px;display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid #e1e3ed;border-radius:17px;background:#fff;color:var(--ink);text-align:left;text-decoration:none;cursor:pointer;transition:background .15s,border-color .15s}
+.sheet-action:active{background:#f3f8f7;border-color:#c5e2dc}
+.sheet-action-icon{width:43px;height:43px;flex:0 0 43px;display:grid;place-items:center;border-radius:14px;background:#e8f3f4;color:#286f70}
+.sheet-action-icon svg{width:22px;height:22px}
+.sheet-icon-github{background:#eceef4;color:#242b37}
+.sheet-icon-upcoming{background:#e0f4e8;color:#28774b}
+.sheet-icon-close{background:#fff0e9;color:#a4563e}
+.sheet-action-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:3px}
+.sheet-action-copy strong{font-size:14px;line-height:1.25;font-weight:760}
+.sheet-action-copy small{font-size:12px;line-height:1.35;color:#747c8a}
+.sheet-action-end{display:grid;place-items:center;color:#7f8796;flex:0 0 20px}
+.sheet-action-end svg{width:18px;height:18px}
+.sheet-action-close{margin-top:2px;background:#fffafa;border-color:#f1dfda}
+body.sheet-open{overflow:hidden}
+.floating-top{bottom:calc(69px + env(safe-area-inset-bottom))}
+.toast{bottom:calc(65px + env(safe-area-inset-bottom))}
+@media(max-width:370px){.upcoming-panel{margin-left:36px}.upcoming-toggle{gap:8px;padding:11px 9px}.upcoming-icon{width:36px;height:36px;flex-basis:36px}.upcoming-title{font-size:14px}.upcoming-description{font-size:11px}.action-sheet{padding-left:13px;padding-right:13px}.sheet-action{min-height:62px;padding:9px 10px}}
+
+
+/* Wide release-detail bottom sheet: a single release at a time, without the timeline rail. */
+.release-sheet-overlay{position:fixed;inset:0;z-index:60;background:rgba(21,29,38,.38);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);opacity:0;transition:opacity .22s ease}
+.release-sheet-overlay.open{opacity:1}
+.release-sheet{position:fixed;z-index:61;left:0;right:0;bottom:0;width:100%;max-width:900px;height:min(93dvh,940px);max-height:calc(100dvh - env(safe-area-inset-top));margin:0 auto;display:flex;flex-direction:column;overflow:hidden;background:var(--bg);border:1px solid #dedfea;border-bottom:0;border-radius:18px 18px 0 0;box-shadow:0 -14px 48px rgba(25,37,54,.19);transform:translateY(105%);transition:transform .28s cubic-bezier(.2,.75,.25,1);padding-bottom:env(safe-area-inset-bottom)}
+.release-sheet.open{transform:translateY(0)}
+.release-sheet::before{content:"";position:absolute;top:0;left:37.5%;width:25%;height:4px;background:#14532d;border-radius:0 0 99px 99px;z-index:3;pointer-events:none}
+.release-sheet-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px 11px;background:rgba(255,255,255,.91);border-bottom:1px solid #e2e4ed;flex:0 0 auto}
+.release-back{display:inline-flex;align-items:center;gap:8px;min-height:40px;border:0;border-radius:12px;padding:0 10px;background:#eef7f5;color:#226f68;font-weight:760;font-size:14px;cursor:pointer}
+.release-back svg{width:19px;height:19px}
+.release-sheet-title{font-size:12px;font-weight:800;color:#7a8190;letter-spacing:.09em;text-transform:uppercase;text-align:right}
+.release-sheet-summary{flex:0 0 auto;min-width:0;padding:14px clamp(15px,3.6vw,28px) 0;background:var(--bg)}.release-sheet-summary:empty{display:none}.release-sheet-summary .release-detail{max-width:820px;margin:0 auto}.release-sheet-summary .release-detail-description{margin:0 0 10px}.release-sheet-summary .release-detail-meta{margin:0 0 11px}.release-sheet-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 clamp(15px,3.6vw,28px) 24px;scrollbar-gutter:stable}
+.release-detail{max-width:820px;margin:0 auto}
+.release-detail-titleline{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:0}
+.release-detail-version{font-size:clamp(25px,5.8vw,34px);line-height:1.15;letter-spacing:-.8px;font-weight:820;margin:0;overflow-wrap:anywhere}
+.release-detail-meta{display:flex;align-items:center;flex-wrap:wrap;gap:8px 13px;margin-top:11px;color:#626a79;font-size:13px}
+.release-detail-meta-item{display:inline-flex;align-items:center;gap:6px;min-width:0}
+.release-detail-meta-item svg{color:#758091;width:15px;height:15px;flex:0 0 auto}
+.release-date-meta,.release-date-meta svg,.release-date-meta>span{color:#151922!important}
+.release-date-meta>span{font-weight:650}
+.release-detail-description{font-size:15px;line-height:1.65;color:#505a6b;margin:16px 0 21px;padding:14px 16px;border:1px solid #dfe5ed;border-radius:16px;background:#fff;overflow-wrap:anywhere}
+.release-detail-description:empty{display:none}
+.release-detail-categories{display:flex;flex-direction:column;gap:16px}
+.release-detail-empty{border:1px dashed #cfd3df;border-radius:17px;padding:23px 18px;color:#6d7482;text-align:center;background:rgba(255,255,255,.6)}
+body.release-open{overflow:hidden}
+.release-row.is-latest .release-marker{border-color:#8158c9}
+.release-card-trigger{display:block;width:100%;padding:1px 0;text-align:left;color:inherit;border:0;background:transparent;cursor:pointer;border-radius:13px}
+.release-card-trigger:focus-visible,.release-back:focus-visible,.release-nav-button:focus-visible{outline:3px solid #b9a0f0;outline-offset:3px}
+.release-card-trigger .release-top{align-items:center;gap:10px}
+.release-card-copy{flex:1;min-width:0}
+.release-subline:empty{display:none}
+.release-change-chips{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-top:7px}
+.release-count-chip{display:inline;color:inherit;background:none;border:0;border-radius:0;min-height:0;padding:0;font-size:12px;line-height:1.4;font-weight:760;letter-spacing:0;white-space:normal}
+.release-count-features,.release-detail-count-features{color:#287744!important}
+.release-count-fixes,.release-detail-count-fixes{color:#91640c!important}
+.release-count-other,.release-detail-count-other{color:#315b96!important}
+.release-detail-count-new{color:#287744!important;font-weight:750}
+.release-detail-count-fix{color:#91640c!important;font-weight:750}
+.release-open-indicator{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border:1px solid #d4e3e4;border-radius:50%;background:#f8fcfc;color:#307976;transition:transform .18s ease,background .18s ease}
+.release-card-trigger:active .release-open-indicator{background:#e6f5f1;transform:translateX(2px)}
+.release-open-indicator svg{width:20px;height:20px}
+@media(min-width:700px){.release-sheet{bottom:14px;height:min(88dvh,940px);border-bottom:1px solid #dedfea;border-radius:18px}release-sheet-scroll{padding-top:23px}}
+@media(max-width:420px){.release-sheet{height:94dvh;border-radius:16px 16px 0 0}.release-sheet-toolbar{padding:9px 13px}.release-sheet-summary{padding:12px 12px 0}.release-sheet-scroll{padding:0 12px 20px}.release-detail-description{padding:12px 13px;margin:13px 0 17px}}
+
+.latest-tag{background:#eee6ff!important;color:#6941a5!important;border:1px solid #dfd1ff!important}.pill-latest{background:#eee6ff!important;color:#6941a5!important;border:1px solid #dfd1ff!important}
+
+/* Paired footer shortcuts; categories show every supplied change without pagination. */
+.bottom-actions-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;max-width:var(--content)}
+.bottom-actions-inner .options-trigger,.download-footer-button{min-width:0;width:100%;height:47px;max-width:none;border-radius:16px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 9px;font-size:13px;font-weight:760;white-space:nowrap}
+.download-footer-button{border:1px solid #c6e6d7;background:rgba(241,251,245,.97);color:#28734f;box-shadow:0 4px 17px rgba(37,106,70,.055);cursor:pointer;transition:transform .15s,background .15s}
+.download-footer-button:active{transform:scale(.99);background:#e4f5e9}
+.download-footer-button svg{width:18px;height:18px;flex:0 0 auto}
+.options-trigger-icon svg{width:17px;height:17px}.options-trigger-chevron svg{width:16px;height:16px}
+.release-sheet-title{display:flex;align-items:center;justify-content:flex-end;gap:8px;text-transform:none;letter-spacing:0;color:var(--ink);font-size:16px;font-weight:800;min-width:0;overflow:hidden}
+.sheet-version-number{overflow-wrap:anywhere;line-height:1.2}
+.sheet-latest-pill{font-size:10px;padding:6px 8px;flex:0 0 auto}
+.release-detail-description{margin:0 0 16px}
+.release-detail-meta{margin:0 0 19px}
+.release-back:focus-visible,.options-trigger:focus-visible,.download-footer-button:focus-visible{outline:3px solid #b9a0f0;outline-offset:3px}
+@media(max-width:370px){.bottom-actions-inner{gap:7px}.bottom-actions-inner .options-trigger,.download-footer-button{font-size:12px;gap:6px;padding:0 6px}.release-sheet-title{font-size:14px}.sheet-latest-pill{font-size:9px;padding:5px 7px}}
+
+
+/* Shared release and roadmap sheet: title stays at the top, content scrolls, Back stays pinned below. */
+.release-sheet{padding-bottom:0}
+.release-sheet-toolbar{justify-content:flex-start;min-height:64px;padding:14px 18px;background:rgba(255,255,255,.96)}
+.release-sheet-title{display:flex;align-items:center;justify-content:flex-start;gap:9px;text-align:left;text-transform:none;letter-spacing:-.25px;color:var(--ink);font-size:clamp(19px,4.7vw,24px);font-weight:820;line-height:1.2;min-width:0;overflow:visible}
+.sheet-version-number{display:block;min-width:0;overflow-wrap:anywhere;line-height:1.2}
+.sheet-latest-pill{font-size:10px;padding:6px 8px;flex:0 0 auto}
+.sheet-upcoming-pill{background:#e0f3e3;color:#2f7545;border:1px solid #c8e8d0;font-size:10px;padding:6px 8px;flex:0 0 auto}
+.release-sheet-footer{flex:0 0 auto;padding:11px 16px calc(12px + env(safe-area-inset-bottom));border-top:1px solid #e0e3eb;background:rgba(251,251,255,.97);}
+.release-back{width:100%;min-height:49px;justify-content:center;border:1.5px solid #b6dce0;border-radius:16px;padding:0 14px;background:#f9fcff;color:#285f69;font-weight:780;font-size:14px;box-shadow:0 3px 12px rgba(39,91,105,.045)}
+.release-back:active{background:#edf8f9}
+.release-sheet-scroll{padding-bottom:18px}
+@media(max-width:420px){.release-sheet-toolbar{padding:12px 14px;min-height:58px}.release-sheet-footer{padding:9px 12px calc(10px + env(safe-area-inset-bottom))}.release-back{min-height:47px}.release-sheet-scroll{padding-bottom:15px}}
+
+
+/* Final density and metadata refinements. */
+.category-card,.upcoming-panel{border-radius:14px}.category-card{--radius:14px}
+.category-head{min-height:52px;padding:8px 11px 8px 12px;gap:9px}
+.category-icon{width:36px;height:36px;flex-basis:36px;border-radius:11px}
+.category-icon svg{width:21px;height:21px}
+.category-name{font-size:15px}
+.category-count{min-width:30px;height:30px;padding:0 8px;font-size:12px}
+.change-item{padding:9px 12px 10px;grid-template-columns:8px minmax(0,1fr);gap:10px}
+.change-bullet{width:7px;height:7px;margin-top:7px}
+.change-scope{font-size:12px;line-height:1.38;margin-bottom:2px}
+.change-text{font-size:14px;line-height:1.46}
+.release-detail-categories{gap:12px}
+.release-detail-description{border-radius:13px;padding:12px 14px;margin-bottom:13px}
+.release-detail-empty{border-radius:13px;padding:18px 14px}
+.release-sheet-toolbar{justify-content:space-between;gap:10px}
+.release-sheet-title{flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:7px;overflow:visible}
+.sheet-version-number{min-width:0;overflow-wrap:anywhere}
+.release-sheet-channel{display:flex;align-items:center;justify-content:flex-end;flex:0 0 auto;min-width:0}
+.release-sheet-channel:empty{display:none}
+.release-sheet-channel .pill{font-size:10px;padding:6px 8px}
+.release-sheet-channel .pill-stable{background:#e0f3e3;color:#2f6f47}
+.release-sheet-channel .pill-prerelease{background:#ffe3ad;color:#86590d}
+.release-sheet-channel .pill-development{background:#dce7ff;color:#31568d}
+@media(max-width:370px){.category-head{padding:8px 9px;gap:8px}.category-icon{width:33px;height:33px;flex-basis:33px}.category-count{min-width:27px;height:27px}.change-item{padding:8px 10px 9px;gap:8px}.release-sheet-toolbar{gap:7px}.release-sheet-title{font-size:17px}.release-sheet-channel .pill{font-size:9px;padding:5px 6px}}
+
+
+
+/* Main page shell: keep the app header, release count/Refresh row and footer note stationary. Only the release list scrolls. */
+html,body{width:100%;height:100%;overflow:hidden}
+body{height:100vh;height:100dvh;min-height:0;display:flex;flex-direction:column;overscroll-behavior:none}
+.app-header{position:relative;top:auto;flex:0 0 auto}
+.main{width:100%;max-width:var(--content);margin:0 auto;flex:1 1 auto;min-height:0;display:flex;flex-direction:column;overflow:hidden;padding:20px 17px 0}
+.status-line{flex:0 0 auto;padding:0 4px 15px}
+#content{flex:1 1 auto;min-height:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scrollbar-gutter:stable;padding:0 0 175px}
+.footer-note-fixed{position:fixed;left:0;right:0;bottom:calc(78px + env(safe-area-inset-bottom));z-index:17;text-align:center;color:#858d9b;font-size:11px;line-height:1.35;padding:5px 18px 6px;background:linear-gradient(180deg,rgba(247,247,252,0),rgba(247,247,252,.96) 32%,rgba(247,247,252,.99));pointer-events:none}
+.footer-note-fixed[hidden]{display:none}
+@media(min-width:700px){.main{padding:23px 25px 0}#content{padding-bottom:175px}}
+@media(max-width:370px){.main{padding:17px 12px 0}#content{padding-bottom:165px}.footer-note-fixed{font-size:10px;bottom:calc(78px + env(safe-area-inset-bottom));padding-left:10px;padding-right:10px}}
+
+/* Final count-row adjustments: one row on release cards, slightly bolder counts in the sheet, and no visible main-list scrollbar. */
+.release-change-chips{display:flex;align-items:center;flex-wrap:nowrap;gap:8px;white-space:nowrap;min-width:0;margin-top:7px}
+.release-count-chip{flex:0 0 auto;white-space:nowrap;font-size:11px;line-height:1.35;font-weight:760}
+.release-detail-count-features,.release-detail-count-fixes,.release-detail-count-other{font-weight:720!important}
+#content{scrollbar-width:none;-ms-overflow-style:none;scrollbar-gutter:auto}
+#content::-webkit-scrollbar{display:none;width:0;height:0}
+@media(max-width:370px){.release-change-chips{gap:6px}.release-count-chip{font-size:10.5px}}
+
+/* Keep release-sheet change totals, features, fixes, and Others together on one line. */
+.release-detail-counts{display:inline-flex;align-items:center;flex:0 0 auto;flex-wrap:nowrap;gap:clamp(6px,2vw,12px);min-width:max-content;white-space:nowrap;font-size:clamp(10px,3.25vw,13px)}
+.release-detail-counts .release-detail-meta-item{display:inline-flex;align-items:center;flex:0 0 auto;gap:4px;min-width:max-content;white-space:nowrap}
+.release-detail-counts .release-detail-meta-item svg{width:13px;height:13px;flex:0 0 auto}
+@media(max-width:370px){.release-detail-counts{gap:6px;font-size:10px}.release-detail-counts .release-detail-meta-item{gap:3px}}
+
+/* Keep each release date and its colored change counts on one shared metadata row. */
+.release-meta-row{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%;flex-wrap:nowrap;overflow:hidden;white-space:nowrap;margin-top:7px}
+.release-meta-row .release-subline{display:inline-flex;align-items:center;flex:0 0 auto;min-width:0;margin-top:0;font-size:12px;line-height:1.35;white-space:nowrap;color:#151922}
+.release-meta-row .release-subline>span{display:block;white-space:nowrap}
+.release-meta-row .release-change-chips{flex:1 1 auto;min-width:0;margin-top:0;gap:7px;overflow:hidden;flex-wrap:nowrap;white-space:nowrap}
+.release-meta-row .release-count-chip{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;font-size:11px;white-space:nowrap}
+@media(max-width:370px){.release-meta-row{gap:6px}.release-meta-row .release-subline{font-size:11px}.release-meta-row .release-change-chips{gap:5px}.release-meta-row .release-count-chip{font-size:10px}}
+
+
+/* Main-page refinement: subtle separators under release metadata and regular-weight colored counts. */
+.release-row:not(:last-child) .release-content{position:relative}
+.release-row:not(:last-child) .release-content::after{content:"";position:absolute;left:0;right:0;bottom:-13px;height:1px;background:#e1e3eb;pointer-events:none}
+.release-meta-row .release-count-chip{font-weight:400}
+
+/* Final requested refinements: stronger sheet description, full-width release divider, and rotated view glyph. */
+.release-detail-description{font-size:16px!important;color:#000!important}
+.release-open-indicator svg{transform:rotate(90deg)}
+
+
+
+/* Align each timeline ring with its release version line instead of the card's overall height. */
+.timeline:before{top:13px}
+.release-rail{padding-top:6px}
+
+/* Keep the Stable channel label aligned to the right on main-page release rows only. */
+.release-card-trigger .version-line > .pill-stable{margin-left:auto}
+
+/* Footer controls: Download sizes to its label; More Options absorbs the remaining width. */
+.bottom-actions-inner{display:flex!important;align-items:center;gap:9px;max-width:var(--content)}
+.bottom-actions-inner .download-footer-button{flex:0 0 auto;width:max-content;max-width:64%;padding:0 12px;font-size:12.5px;gap:7px;white-space:nowrap}
+.bottom-actions-inner .options-trigger{flex:1 1 0;width:auto;min-width:0;max-width:none;justify-content:center;gap:7px;padding:0 9px;font-size:13px;white-space:nowrap}
+.bottom-actions-inner .options-trigger>span:nth-child(2){min-width:0;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:380px){.bottom-actions-inner{gap:7px}.bottom-actions-inner .download-footer-button{max-width:64%;padding:0 9px;font-size:12px;gap:6px}.bottom-actions-inner .options-trigger{font-size:12px;padding:0 7px;gap:6px}.bottom-actions-inner .options-trigger-chevron{display:none}}
+@media(min-width:520px){.bottom-actions-inner .download-footer-button{font-size:13px;padding:0 14px;gap:8px}.bottom-actions-inner .options-trigger{font-size:13px}}
+
+</style>
+</head>
+<body>
+<header class="app-header">
+  <div class="app-header-inner">
+    <div class="app-icon-wrap" id="appIconWrap" aria-hidden="true">
+      <img class="app-icon" id="appIcon" alt="">
+      <span class="icon-fallback" id="iconFallback"></span>
+    </div>
+    <div class="app-title-wrap">
+      <div class="app-title-line"><h1 class="app-title" id="appName">Changelog</h1><span class="latest-tag" id="latestTag" hidden></span></div>
+      <p class="app-subtitle" id="appDescription">Release notes and improvements</p>
+      <div class="header-meta" id="headerMeta"></div>
+    </div>
+  </div>
+</header>
+<main class="main">
+  <div class="status-line" id="statusLine" aria-live="polite">
+    <div class="status-left"><span class="status-dot loading" id="statusDot"></span><span id="statusText">Loading release notes…</span></div>
+    <button class="text-button" id="refreshButton" type="button" hidden>Refresh</button>
+  </div>
+  <section id="content" aria-live="polite">
+    <div class="loading-panel">
+      <div class="loading-row"><span class="spinner" aria-hidden="true"></span><div><div class="loading-title">Getting the latest changes</div><p class="loading-copy">Fetching release notes from GitHub.</p></div></div>
+      <div class="skeleton"></div><div class="skeleton short"></div>
+    </div>
+  </section>
+</main>
+<div class="footer-note-fixed" id="footerNote" hidden></div>
+<button class="floating-top" id="backToTop" aria-label="Back to top" title="Back to top" type="button"></button>
+<footer class="bottom-actions">
+  <div class="bottom-actions-inner">
+    <button class="download-footer-button" id="downloadLatestButton" type="button" data-action="download-latest"><span id="downloadLatestIcon"></span><span>Download Latest Version</span></button>
+    <button class="options-trigger" id="optionsButton" type="button" aria-haspopup="dialog" aria-controls="actionSheet" aria-expanded="false"><span class="options-trigger-icon"><span id="optionsIcon"></span></span><span>More options</span><span class="options-trigger-chevron"><span id="optionsChevron"></span></span></button>
+  </div>
+</footer>
+<div class="sheet-overlay" id="sheetOverlay" hidden></div>
+<section class="action-sheet" id="actionSheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" aria-hidden="true" hidden>
+  <div class="sheet-handle" aria-hidden="true"></div>
+  <div class="sheet-heading"><div><h2 id="sheetTitle">Changelog options</h2><p>Quick links and useful actions</p></div><button class="sheet-close" id="sheetClose" type="button" aria-label="Close options"><span class="inline-sheet-close-icon"></span></button></div>
+  <div class="sheet-actions">
+    <a class="sheet-action" id="githubButton" href="https://github.com/AraafRoyall/Cleaner-Royall" target="_blank" rel="noopener noreferrer"><span class="sheet-action-icon sheet-icon-github" id="githubIcon"><span class="inline-github-icon"></span></span><span class="sheet-action-copy"><strong>GitHub repository</strong><small>Browse source code and releases</small></span><span class="sheet-action-end"><span class="inline-external-icon"></span></span></a>
+    <button class="sheet-action" id="upcomingOptionsButton" type="button" data-action="open-upcoming"><span class="sheet-action-icon sheet-icon-upcoming"><span class="inline-sparkles-icon"></span></span><span class="sheet-action-copy"><strong>Upcoming Features</strong><small>View planned features and announcements</small></span><span class="sheet-action-end"><span class="inline-chevron-icon"></span></span></button>
+    <button class="sheet-action sheet-action-close" id="closeButton" type="button"><span class="sheet-action-icon sheet-icon-close"><span class="inline-sheet-close-icon"></span></span><span class="sheet-action-copy"><strong>Close viewer</strong><small>Return to the previous screen</small></span><span class="sheet-action-end"><span class="inline-chevron-icon"></span></span></button>
+  </div>
+</section>
+<div class="release-sheet-overlay" id="releaseSheetOverlay" hidden></div>
+<section class="release-sheet" id="releaseSheet" role="dialog" aria-modal="true" aria-labelledby="releaseSheetTitle" aria-hidden="true" hidden>
+  <header class="release-sheet-toolbar">
+    <div class="release-sheet-title" id="releaseSheetTitle">Release version</div>
+    <div class="release-sheet-channel" id="releaseSheetChannel"></div>
+  </header>
+  <div class="release-sheet-summary" id="releaseSheetSummary"></div>
+  <div class="release-sheet-scroll" id="releaseSheetContent" tabindex="0"></div>
+  <footer class="release-sheet-footer">
+    <button class="release-back" id="releaseBackButton" type="button"><span id="releaseBackIcon"></span>Back</button>
+  </footer>
+</section>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(() => {
+  'use strict';
+  const CHANGELOG_URL = 'https://raw.githubusercontent.com/AraafRoyall/Cleaner-Royall/main/server/changelog/ChangeLog.json';
+  const DEFAULT_REPOSITORY = 'https://github.com/AraafRoyall/Cleaner-Royall';
+  const $ = id => document.getElementById(id);
+  const expandedReleases = new Set();
+  let releaseVersions = [];
+  let currentReleaseVersion = null;
+  let currentSheetMode = '';
+  let releaseReturnFocus = null;
+  let changelogData = null;
+  let didInitialExpand = false;
+  let toastTimer = null;
+
+  const svgPaths = {
+    sparkles:'<path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"/><path d="m19 14 1.1 2.9L23 18l-2.9 1.1L19 22l-1.1-2.9L15 18l2.9-1.1L19 14ZM5 2l.8 2.2L8 5l-2.2.8L5 8l-.8-2.2L2 5l2.2-.8L5 2Z"/>',
+    bug:'<path d="M8 7.5 6 5.5M16 7.5l2-2M9 4h6l1 3H8l1-3Z"/><rect x="6.5" y="7" width="11" height="13" rx="4"/><path d="M3 11h3.5M17.5 11H21M3.5 16h3M17.5 16h3M12 10v7"/>',
+    list:'<path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01" stroke-width="3"/>',
+    shield:'<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/>',
+    gauge:'<path d="M20.5 15a9 9 0 1 0-17 0"/><path d="m12 13 4-5M7 18h10"/><path d="M5 14h.01M19 14h.01M12 6v.01" stroke-width="3"/>',
+    trash:'<path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 10v6M14 10v6"/>',
+    alert:'<path d="m10.3 3.9-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3.1l-8-14a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/>',
+    wand:'<path d="m15 4 5 5M4 20l11.5-11.5M12 6l1-3 1 3 3 1-3 1-1 3-1-3-3-1 3-1ZM19 15l.7-2 .7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7Z"/>',
+    package:'<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="M3 8v9l9 5 9-5V8M12 13v9M7.5 5.5l9 5"/>',
+    zap:'<path d="m13 2-3 8h7L9 22l2-9H5l8-11Z"/>',
+    settings:'<circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.4 1.1-1.4 2.4-1.7-.6a8 8 0 0 1-1.6.9l-.3 1.8h-2.8l-.3-1.8a8 8 0 0 1-1.6-.9l-1.7.6-1.4-2.4L7.5 15a8 8 0 0 1 0-1.9l-1.4-1.2 1.4-2.4 1.7.6a8 8 0 0 1 1.6-.9l.3-1.8h2.8l.3 1.8a8 8 0 0 1 1.6.9l1.7-.6 1.4 2.4-1.4 1.2a8 8 0 0 1-.1 1.9Z"/>',
+    github:'<path fill="currentColor" stroke="none" d="M12 .9a11.2 11.2 0 0 0-3.54 21.82c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.32-3.76-1.32-.5-1.3-1.24-1.65-1.24-1.65-1.02-.7.08-.69.08-.69 1.12.08 1.7 1.15 1.7 1.15 1 .1.8 2.62 3.9 1.99.1-.73.39-1.23.7-1.52-2.48-.29-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.29-.5-1.44.11-3 0 0 .94-.3 3.08 1.15a10.65 10.65 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.56.23 2.71.11 3 .72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.23-5.1 5.51.4.35.75 1.02.75 2.06v3.09c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .9Z"/>',
+    chevron:'<path d="m6 9 6 6 6-6"/>',
+    chevronUp:'<path d="m6 15 6-6 6 6"/>',
+    arrowUp:'<path d="m6 14 6-6 6 6"/><path d="M12 8v12"/>',
+    arrowLeft:'<path d="m15 18-6-6 6-6"/>',
+    arrowRight:'<path d="m9 18 6-6-6-6"/>',
+    chevronLeft:'<path d="m15 18-6-6 6-6"/>',
+    chevronRight:'<path d="m9 18 6-6-6-6"/>',
+    angleBrackets:'<path d="m8 7-5 5 5 5M16 7l5 5-5 5"/>',
+    download:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/>',
+    calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/>',
+    external:'<path d="M14 3h7v7M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+    retry:'<path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.6 9A7 7 0 0 1 18 6l2 6M4 12l2 6a7 7 0 0 0 12.4-3"/>',
+    close:'<path d="m6 6 12 12M18 6 6 18"/>',
+    clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+    check:'<path d="m5 12 4 4L19 6"/>',
+    code:'<path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/>',
+    leaf:'<path d="M20 4c-8 0-14 4-14 11a5 5 0 0 0 5 5c7 0 11-6 9-16Z"/><path d="M4 21c3-5 7-8 12-11"/>'
+  };
+  function icon(name,size=20,extra=''){const body=svgPaths[name]||svgPaths.list;return `<svg ${extra} xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`}
+  function escapeHtml(value){return String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
+  function safeUrl(value){try{const url=new URL(String(value||''),location.href);return ['https:','http:'].includes(url.protocol)?url.href:''}catch(_){return ''}}
+  function safeSlug(value){return String(value||'category').toLowerCase().replace(/[^a-z0-9_-]+/g,'-').replace(/^-+|-+$/g,'')||'category'}
+  function prettyCategory(key){const map={new:'New',fixes:'Fixes',general:'General changes',security:'Security',performance:'Performance',breaking:'Breaking changes',removed:'Removed',deprecated:'Deprecated',improved:'Improvements',improvements:'Improvements',changed:'Changed',translations:'Translations',documentation:'Documentation',ui:'Interface changes',known_issues:'Known issues'};return map[String(key).toLowerCase()]||String(key).replace(/[_-]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}
+  function categoryIcon(key){const value=String(key).toLowerCase();if(value==='new'||value==='added'||value==='features')return 'sparkles';if(value==='fixes'||value==='bugfixes'||value==='bugs')return 'bug';if(value==='security')return 'shield';if(value==='performance')return 'gauge';if(value==='removed')return 'trash';if(value==='breaking'||value==='known_issues')return 'alert';if(value==='deprecated')return 'clock';if(value==='improved'||value==='improvements')return 'wand';if(value==='general'||value==='changed')return 'list';if(value==='documentation')return 'package';return 'list'}
+  function categoryTheme(key){const value=String(key).toLowerCase();if(['new','added','features'].includes(value))return 'new';if(['fixes','bugfixes','bugs'].includes(value))return 'fixes';if(['general','changed'].includes(value))return 'general';if(value==='security')return 'security';if(value==='performance')return 'performance';if(['breaking','known_issues'].includes(value))return 'breaking';if(value==='removed')return 'removed';if(value==='deprecated')return 'deprecated';if(['improved','improvements'].includes(value))return 'improved';return 'default'}
+  function sortedCategories(changes){const keys=Object.keys(changes||{}).filter(key=>Array.isArray(changes[key]));const priority={new:0,fixes:1,general:2};return keys.sort((a,b)=>(priority[a.toLowerCase()]??10)-(priority[b.toLowerCase()]??10))}
+  function parseVersion(value){const clean=String(value||'').trim().replace(/^v/i,'').split('+')[0];const pieces=clean.split('-',2);return{core:(pieces[0]||'').split('.').map(n=>{const hit=n.match(/^\d+/);return hit?Number(hit[0]):0}),pre:pieces.length>1?pieces[1].split('.'):[]}}
+  function compareVersions(a,b){const x=parseVersion(a),y=parseVersion(b),len=Math.max(x.core.length,y.core.length);for(let i=0;i<len;i++){const nx=x.core[i]||0,ny=y.core[i]||0;if(nx!==ny)return ny-nx}if(!x.pre.length&&!y.pre.length)return 0;if(!x.pre.length)return -1;if(!y.pre.length)return 1;const lenp=Math.max(x.pre.length,y.pre.length);for(let i=0;i<lenp;i++){if(x.pre[i]===undefined)return 1;if(y.pre[i]===undefined)return -1;const xn=/^\d+$/.test(x.pre[i]),yn=/^\d+$/.test(y.pre[i]);if(xn&&yn){const diff=Number(y.pre[i])-Number(x.pre[i]);if(diff)return diff}else if(xn!==yn)return xn?-1:1;else{const diff=y.pre[i].localeCompare(x.pre[i],undefined,{numeric:true,sensitivity:'base'});if(diff)return diff}}return 0}
+  function countChanges(release){const changes=release&&release.changes&&typeof release.changes==='object'?release.changes:{};let total=0;for(const value of Object.values(changes))if(Array.isArray(value))total+=value.length;return total}
+  function humanDate(dateValue){if(!dateValue)return '';const date=new Date(String(dateValue).length===10?`${dateValue}T12:00:00`:dateValue);if(Number.isNaN(date.getTime()))return String(dateValue);const today=new Date();today.setHours(12,0,0,0);const target=new Date(date);target.setHours(12,0,0,0);const days=Math.round((today-target)/86400000);if(days===0)return 'Today';if(days===1)return 'Yesterday';if(days>1&&days<7)return `${days} days ago`;return new Intl.DateTimeFormat(undefined,{day:'numeric',month:'short',year:date.getFullYear()===today.getFullYear()?undefined:'numeric'}).format(date)}
+  function fullDate(value){if(!value)return '';const d=new Date(String(value).length===10?`${value}T12:00:00`:value);if(Number.isNaN(d.getTime()))return String(value);return new Intl.DateTimeFormat(undefined,{day:'numeric',month:'short',year:'numeric'}).format(d)}
+  function channelBadge(channel){const value=String(channel||'').toLowerCase();if(!value)return '';if(['stable','release','production'].includes(value))return '<span class="pill pill-stable">Stable</span>';if(['prerelease','pre-release','preview','beta','alpha','rc'].includes(value))return `<span class="pill pill-prerelease">${escapeHtml(value==='prerelease'?'Pre-release':value.toUpperCase()==='RC'?'Release candidate':value.charAt(0).toUpperCase()+value.slice(1))}</span>`;if(['dev','development','nightly'].includes(value))return `<span class="pill pill-development">${escapeHtml(value==='dev'?'Development':value.charAt(0).toUpperCase()+value.slice(1))}</span>`;return `<span class="pill pill-other">${escapeHtml(value.charAt(0).toUpperCase()+value.slice(1))}</span>`}
+  function relativeSummary(version,release){const date=humanDate(release.date);return date?`<span title="${escapeHtml(fullDate(release.date))}">${escapeHtml(date)}</span>`:''}
+  function categoryCount(changes,accepted){return Object.entries(changes||{}).reduce((total,[key,value])=>total+(Array.isArray(value)&&accepted.includes(String(key).toLowerCase())?value.length:0),0)}
+  function releaseChangeChips(release){const changes=release&&release.changes&&typeof release.changes==='object'&&!Array.isArray(release.changes)?release.changes:{};const features=categoryCount(changes,['new','added','features','feature']);const fixes=categoryCount(changes,['fixes','fix','bugfixes','bugs']);const other=Math.max(0,countChanges(release)-features-fixes);const counts=[];if(features)counts.push(`<span class="release-count-chip release-count-features">${features} ${features===1?'feature':'features'}</span>`);if(fixes)counts.push(`<span class="release-count-chip release-count-fixes">${fixes} ${fixes===1?'fix':'fixes'}</span>`);if(other)counts.push(`<span class="release-count-chip release-count-other">${other} ${other===1?'Other':'Others'}</span>`);if(!counts.length)counts.push('<span class="release-count-chip release-count-other">No listed changes</span>');return counts.join('')}
+  function renderItem(item,category){let scope='',text='',reference='';if(typeof item==='string'){text=item}else if(item&&typeof item==='object'){scope=typeof item.scope==='string'?item.scope:'';text=typeof item.title==='string'?item.title:(typeof item.description==='string'?item.description:'');if(item.title&&item.description&&item.title!==item.description)text+=` — ${item.description}`;const ref=item.reference&&typeof item.reference==='object'?item.reference:null;const href=safeUrl(ref&&ref.url);if(href)reference=`<a class="change-reference" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(ref.label||'View reference')} ${icon('external',13)}</a>`}else{text=String(item??'')};return `<div class="change-item"><span class="change-bullet" aria-hidden="true"></span><div class="change-copy">${scope?`<div class="change-scope">${escapeHtml(scope)}</div>`:''}<div class="change-text">${escapeHtml(text)}</div>${reference}</div></div>`}
+  function renderCategory(version,key,items){const valid=items.filter(item=>typeof item==='string'||(item&&typeof item==='object'));const theme=categoryTheme(key);const itemMarkup=valid.map(item=>renderItem(item,key)).join('');return `<section class="category-card cat-${theme==='default'?'default':theme}" aria-label="${escapeHtml(prettyCategory(key))}"><div class="category-head"><span class="category-icon">${icon(categoryIcon(key),23)}</span><span class="category-name">${escapeHtml(prettyCategory(key))}</span><span class="category-count">${valid.length}</span></div><div class="category-items">${itemMarkup||'<div class="release-empty">No entries in this category.</div>'}</div></section>`}
+  function countArrayChanges(changes){return Object.values(changes&&typeof changes==='object'?changes:{}).reduce((sum,value)=>sum+(Array.isArray(value)?value.length:0),0)}
+  function renderRelease(version,release,index,latestVersion){const latest=version===latestVersion;const channel=String(release.channel||'').toLowerCase();const prerelease=['prerelease','pre-release','preview','beta','alpha','rc','dev','development','nightly'].includes(channel);const subtitle=relativeSummary(version,release);const chips=releaseChangeChips(release);return `${index===1?'<div class="older-label">Earlier releases</div>':''}<article class="release-row ${latest?'is-latest':''} ${prerelease?'is-prerelease':''}" id="release-${escapeHtml(safeSlug(version))}"><div class="release-rail"><span class="release-marker" aria-hidden="true"></span></div><div class="release-content"><button class="release-card-trigger" type="button" data-action="open-release" data-version="${escapeHtml(version)}" aria-label="View changelog for ${escapeHtml(version)}"><span class="release-top"><span class="release-card-copy"><span class="version-line"><span class="version-name">${escapeHtml(version)}</span>${latest?'<span class="pill pill-latest">Latest</span>':''}${channelBadge(release.channel)}</span><span class="release-meta-row"><span class="release-subline">${subtitle}</span><span class="release-change-chips">${chips}</span></span></span><span class="release-open-indicator">${icon('angleBrackets',20)}</span></span></button></div></article>`}
+  function renderTimeline(data){const all=data.releases&&typeof data.releases==='object'&&!Array.isArray(data.releases)?data.releases:{};const latest=String(data.LatestVersion||'');releaseVersions=Object.keys(all);releaseVersions.sort((a,b)=>{if(a===latest)return -1;if(b===latest)return 1;return compareVersions(a,b)});const timelineMarkup=releaseVersions.length?`<div class="timeline">${releaseVersions.map((version,index)=>renderRelease(version,all[version]||{},index,latest)).join('')}</div>`:'<div class="empty-panel"><h2 class="error-title">No releases found</h2><p class="error-copy">There are no release entries in the changelog yet.</p></div>';$('content').innerHTML=timelineMarkup;$('content').scrollTop=0;$('footerNote').textContent=`Release notes provided by ${data.app&&typeof data.app.name==='string'&&data.app.name.trim()?data.app.name.trim():'this project'}.`;$('footerNote').hidden=false;$('statusDot').className='status-dot';$('statusText').textContent=`${releaseVersions.length} ${releaseVersions.length===1?'release':'releases'} available`;$('refreshButton').hidden=false}
+  function releaseDescriptionMarkup(release){return typeof release.description==='string'&&release.description.trim()?`<p class="release-detail-description">${escapeHtml(release.description.trim())}</p>`:''}
+  function renderReleaseSheet(){if(!changelogData||!currentReleaseVersion)return;const release=(changelogData.releases||{})[currentReleaseVersion];if(!release)return;const latest=currentReleaseVersion===String(changelogData.LatestVersion||'');const changes=release.changes&&typeof release.changes==='object'&&!Array.isArray(release.changes)?release.changes:{};const categories=sortedCategories(changes);const cards=categories.map(key=>renderCategory(currentReleaseVersion,key,Array.isArray(changes[key])?changes[key]:[])).join('');const titleBadge=latest?'<span class="pill pill-latest sheet-latest-pill">Latest</span>':'';$('releaseSheetTitle').innerHTML=`<span class="sheet-version-number">${escapeHtml(currentReleaseVersion)}</span>${titleBadge}`;$('releaseSheetChannel').innerHTML=channelBadge(release.channel);const meta=[];if(release.date)meta.push(`<span class="release-detail-meta-item release-date-meta">${icon('calendar',15)}<span>${escapeHtml(fullDate(release.date))}</span></span>`);const featureCount=categoryCount(changes,['new','added','features','feature']);const fixCount=categoryCount(changes,['fixes','fix','bugfixes','bugs']);const total=countChanges(release);const otherCount=Math.max(0,total-featureCount-fixCount);const countMeta=[];countMeta.push(`<span class="release-detail-meta-item">${icon('list',15)}<span>${total} ${total===1?'change':'changes'}</span></span>`);if(featureCount)countMeta.push(`<span class="release-detail-meta-item"><span class="release-detail-count-features">${featureCount} ${featureCount===1?'feature':'features'}</span></span>`);if(fixCount)countMeta.push(`<span class="release-detail-meta-item"><span class="release-detail-count-fixes">${fixCount} ${fixCount===1?'fix':'fixes'}</span></span>`);if(otherCount)countMeta.push(`<span class="release-detail-meta-item"><span class="release-detail-count-other">${otherCount} ${otherCount===1?'Other':'Others'}</span></span>`);meta.push(`<span class="release-detail-counts">${countMeta.join('')}</span>`);$('releaseSheetSummary').innerHTML=`<div class="release-detail">${releaseDescriptionMarkup(release)}<div class="release-detail-meta">${meta.join('')}</div></div>`;$('releaseSheetContent').innerHTML=`<div class="release-detail"><div class="release-detail-categories">${cards||'<div class="release-detail-empty">No changelog entries were added for this release.</div>'}</div></div>`;$('releaseSheetContent').scrollTop=0;$('releaseSheetContent').scrollLeft=0}
+  function renderUpcomingNotice(message,badge){$('releaseSheetTitle').innerHTML='<span class="sheet-version-number">Upcoming Features</span>';$('releaseSheetSummary').innerHTML='';$('releaseSheetChannel').innerHTML=`<span class="pill sheet-upcoming-pill">${escapeHtml(badge||'Not announced')}</span>`;$('releaseSheetContent').innerHTML=`<div class="release-detail"><div class="release-detail-empty upcoming-empty-state">${escapeHtml(message)}</div></div>`;$('releaseSheetContent').scrollTop=0;$('releaseSheetContent').scrollLeft=0;return true}
+  function presentReleaseSheet(){const sheet=$('releaseSheet'),overlay=$('releaseSheetOverlay'),content=$('releaseSheetContent');sheet.scrollTop=0;content.scrollTop=0;content.scrollLeft=0;sheet.hidden=false;overlay.hidden=false;sheet.setAttribute('aria-hidden','false');document.body.classList.add('release-open');requestAnimationFrame(()=>{sheet.scrollTop=0;content.scrollTop=0;content.scrollLeft=0;sheet.classList.add('open');overlay.classList.add('open');requestAnimationFrame(()=>{sheet.scrollTop=0;content.scrollTop=0;content.scrollLeft=0;$('releaseBackButton').focus({preventScroll:true})})})}
+  function openReleaseSheet(version,trigger){if(!changelogData||(changelogData.releases||{})[version]===undefined)return;closeActionSheet();currentSheetMode='release';currentReleaseVersion=version;releaseReturnFocus=trigger||document.activeElement;renderReleaseSheet();presentReleaseSheet()}
+  function openUpcomingSheet(trigger){if(!changelogData)return;closeActionSheet();if(changelogData.upcomingEnabled===true){const url=safeUrl(changelogData.upcomingUrl);if(url){window.location.assign(url);return}currentSheetMode='notice';currentReleaseVersion=null;releaseReturnFocus=trigger||document.activeElement;renderUpcomingNotice('The upcoming features tracker link is not configured yet.','Unavailable');presentReleaseSheet();return}currentSheetMode='notice';currentReleaseVersion=null;releaseReturnFocus=trigger||document.activeElement;renderUpcomingNotice('No upcoming features are planned yet, or plans have not been disclosed.','Not announced');presentReleaseSheet()}
+  function downloadLatestVersion(){const url=safeUrl(changelogData&&changelogData.downloadUrl);if(!url){toast('Download URL is not configured in ChangeLog.json.');return}window.location.assign(url)}
+  function closeReleaseSheet(){const sheet=$('releaseSheet'),overlay=$('releaseSheetOverlay');if(sheet.hidden)return;sheet.classList.remove('open');overlay.classList.remove('open');sheet.setAttribute('aria-hidden','true');document.body.classList.remove('release-open');currentSheetMode='';currentReleaseVersion=null;setTimeout(()=>{if(!sheet.classList.contains('open')){sheet.hidden=true;overlay.hidden=true}},280);const focusTarget=releaseReturnFocus;releaseReturnFocus=null;if(focusTarget&&typeof focusTarget.focus==='function')setTimeout(()=>focusTarget.focus({preventScroll:true}),40)}
+  function applyAppMetadata(data){const app=data.app&&typeof data.app==='object'?data.app:{};const appName=typeof app.name==='string'&&app.name.trim()?app.name.trim():'Changelog';const description=typeof app.description==='string'&&app.description.trim()?app.description.trim():"Release notes and improvements";$('appName').textContent=appName;document.title=`${appName} — Changelog`;$('appDescription').textContent=description;const latest=String(data.LatestVersion||'').trim();const latestTag=$('latestTag');latestTag.hidden=!latest;latestTag.textContent=latest?`Latest ${latest}`:'';const iconUrl=safeUrl(app.icon);const img=$('appIcon');const fallback=$('iconFallback');fallback.innerHTML=icon('leaf',41);fallback.style.display='grid';img.alt=`${appName} icon`;img.classList.remove('is-visible');img.onload=()=>{img.classList.add('is-visible');fallback.style.display='none'};img.onerror=()=>{img.classList.remove('is-visible');fallback.style.display='grid'};if(iconUrl){img.src=iconUrl}else{img.removeAttribute('src');fallback.style.display='grid'}$('headerMeta').innerHTML='';const repo=safeUrl(app.repository)||DEFAULT_REPOSITORY;$('githubButton').href=repo}
+  function showError(error){$('footerNote').hidden=true;$('statusDot').className='status-dot error';$('statusText').textContent='Unable to load changelog';$('refreshButton').hidden=false;const message=error&&error.message?error.message:'Network request failed';$('content').innerHTML=`<div class="error-panel"><h2 class="error-title">Couldn't load release notes</h2><p class="error-copy">Check your internet connection and try again. The viewer loads the JSON directly from your repository's main branch.</p><div class="error-actions"><button class="small-action" type="button" data-action="retry">${icon('retry',15)} Retry</button></div><p class="error-copy" style="margin-top:12px;font-size:12px">Details: ${escapeHtml(message)}</p></div>`}
+  async function loadChangelog(){const button=$('refreshButton');button.disabled=true;button.textContent='Loading…';$('statusDot').className='status-dot loading';$('statusText').textContent='Loading release notes…';try{const response=await fetch(CHANGELOG_URL,{cache:'no-store',headers:{Accept:'application/json'}});if(!response.ok)throw new Error(`GitHub returned HTTP ${response.status}`);const data=await response.json();if(!data||typeof data!=='object'||!data.releases||typeof data.releases!=='object')throw new Error('JSON format is invalid or missing the releases object');changelogData=data;applyAppMetadata(data);renderTimeline(data)}catch(error){showError(error)}finally{button.disabled=false;button.innerHTML=`${icon('retry',14)} Refresh`}}
+  function toggleRelease(version){const isOpen=expandedReleases.has(version);expandedReleases.clear();if(!isOpen)expandedReleases.add(version);if(changelogData)renderTimeline(changelogData)}
+  function toast(message){const el=$('toast');el.textContent=message;el.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('visible'),2600)}
+  document.addEventListener('click',event=>{const target=event.target.closest('[data-action]');if(!target)return;const action=target.dataset.action;if(action==='open-release')openReleaseSheet(target.dataset.version,target);if(action==='close-release-sheet')closeReleaseSheet();if(action==='retry')loadChangelog();if(action==='open-upcoming')openUpcomingSheet(target);if(action==='download-latest')downloadLatestVersion(target)});
+  function openActionSheet(){const sheet=$('actionSheet'),overlay=$('sheetOverlay');sheet.hidden=false;overlay.hidden=false;document.body.classList.add('sheet-open');sheet.setAttribute('aria-hidden','false');$('optionsButton').setAttribute('aria-expanded','true');requestAnimationFrame(()=>{sheet.classList.add('open');overlay.classList.add('open')});$('sheetClose').focus({preventScroll:true})}
+  function closeActionSheet(){const sheet=$('actionSheet'),overlay=$('sheetOverlay');sheet.classList.remove('open');overlay.classList.remove('open');sheet.setAttribute('aria-hidden','true');$('optionsButton').setAttribute('aria-expanded','false');document.body.classList.remove('sheet-open');setTimeout(()=>{if(!sheet.classList.contains('open')){sheet.hidden=true;overlay.hidden=true}},260)}
+  function closeViewer(){closeActionSheet();try{window.close()}catch(_){}setTimeout(()=>{if(!document.hidden)toast('You can return to the previous screen now.')},180)}
+  $('iconFallback').innerHTML=icon('leaf',41);$('optionsIcon').innerHTML=icon('settings',19);$('optionsChevron').innerHTML=icon('chevronUp',18);$('releaseBackIcon').innerHTML=icon('chevronLeft',19);$('downloadLatestIcon').innerHTML=icon('download',19);document.querySelectorAll('.inline-sheet-close-icon').forEach(el=>el.innerHTML=icon('close',20));document.querySelectorAll('.inline-github-icon').forEach(el=>el.innerHTML=icon('github',22));document.querySelectorAll('.inline-external-icon').forEach(el=>el.innerHTML=icon('external',18));document.querySelectorAll('.inline-sparkles-icon').forEach(el=>el.innerHTML=icon('sparkles',22));document.querySelectorAll('.inline-chevron-icon').forEach(el=>el.innerHTML=icon('chevron',18));
+  $('refreshButton').addEventListener('click',loadChangelog);$('optionsButton').addEventListener('click',openActionSheet);$('sheetClose').addEventListener('click',closeActionSheet);$('sheetOverlay').addEventListener('click',closeActionSheet);$('releaseBackButton').addEventListener('click',closeReleaseSheet);$('releaseSheetOverlay').addEventListener('click',closeReleaseSheet);$('githubButton').addEventListener('click',closeActionSheet);$('closeButton').addEventListener('click',closeViewer);window.addEventListener('keydown',event=>{if(event.key==='Escape'&&!$('releaseSheet').hidden)closeReleaseSheet();else if(event.key==='Escape'&&!$('actionSheet').hidden)closeActionSheet()});
+  $('backToTop').innerHTML=icon('arrowUp',23);$('backToTop').addEventListener('click',()=> $('content').scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));$('content').addEventListener('scroll',()=>$('backToTop').classList.toggle('visible',$('content').scrollTop>420),{passive:true});
+  loadChangelog();
+})();
+</script>
+</body>
+</html>
