@@ -8,6 +8,7 @@
     "developer": "Araaf Royall"
   },
   "LatestVersion": "v2.1.0",
+  "downloadUrl": "https://github.com/AraafRoyall/Cleaner-Royall/releases/download/Cleaner-Royall-v4.8/Cleaner.Royall.v4.8.apk",
   "upcomingEnabled": true,
   "upcomingUrl": "UpcomingFeaturesViewer.html",
   "releases": {
@@ -57,113 +58,771 @@
         ]
       }
     },
-    "v2.0.0": {
-      "date": "2026-10-10",
-      "channel": "stable",
-      "description": "A major update introducing a refreshed interface and several new cleaning tools.",
+    "v1.0": {
+      "source": "server/changelog/old/v1.0",
       "changes": {
         "new": [
-          "Introduced the redesigned dashboard",
-          "Added a dedicated storage cleaner",
-          "Added a large file finder",
-          "Added a duplicate file finder",
-          "Added an application manager",
-          "Added a cleaning history screen",
-          "Added support for selecting multiple files",
-          "Added a quick settings panel"
-        ],
-        "fixes": [
-          "Fixed incorrect storage usage on newer Android versions",
-          "Fixed a crash when scanning empty folders",
-          "Fixed an issue with selecting files from external storage",
-          "Fixed an issue where the back button closed the wrong screen",
-          "Fixed a progress indicator that remained visible after scanning",
-          "Fixed incorrect sorting of file sizes"
-        ],
-        "general": [
-          "Improved application navigation",
-          "Updated colors and typography",
-          "Optimized scanning performance",
-          "Improved compatibility with supported Android versions",
-          "Reduced unnecessary permission checks"
-        ],
-        "breaking": [
-          "Updated the internal configuration format"
+          "Initial Version of Cleaner Royall by AraafRoyall"
         ]
       }
     },
-    "v1.9.0": {
-      "date": "2026-10-05",
-      "channel": "stable",
-      "description": "Improved storage scanning reliability and introduced additional file management tools.",
+    "v1.1": {
+      "source": "server/changelog/old/v1.1",
       "changes": {
         "new": [
-          "Added a cache cleaning tool",
-          "Added a temporary file finder",
-          "Added a storage overview section",
-          "Added a recent cleaning activity list",
-          "Added an option to exclude selected folders",
-          "Added support for refreshing scan results"
+          "New : Removed sh scripts"
         ],
         "fixes": [
-          "Fixed a crash when accessing restricted folders",
-          "Fixed incorrect cache size calculations",
-          "Fixed an issue with file selection after scanning",
-          "Fixed a dialog that remained open after cancelling an operation",
-          "Fixed an issue with refreshing storage information"
+          "User Reported bugs"
+        ]
+      }
+    },
+    "v1.2": {
+      "source": "server/changelog/old/v1.2",
+      "changes": {
+        "new": [
+          "New : Feedback Option",
+          "New : Easy cache wiper API",
+          "New : Option to mount /data"
+        ]
+      }
+    },
+    "v1.3": {
+      "source": "server/changelog/old/v1.3",
+      "changes": {
+        "new": [
+          "New : Proper Instructions",
+          "New : Daily Cleaner",
+          "New : oat Cleaner"
+        ]
+      }
+    },
+    "v1.4": {
+      "source": "server/changelog/old/v1.4",
+      "changes": {
+        "new": [
+          "oat/odex/vdex cleaner now supports old Android versions.",
+          "Settings Page Implimentation.",
+          "Daily Cleaner shift to down for easy use.",
+          "All Old Changeloge Merge.",
+          "Changelog UI improvements.",
+          "Action performed replaced to Cleared.",
+          "Execute replaced to Clear."
+        ],
+        "fixes": [
+          "Report bug in random dialog.",
+          "Supports system dark mode",
+          "Margins",
+          "Fonts in About Dialog.",
+          "some other improvements."
+        ]
+      }
+    },
+    "v1.5": {
+      "source": "server/changelog/old/v1.5",
+      "changes": {
+        "new": [
+          "Logcat Cleaner in Logs Cleaner.",
+          "Cleaning Directories list Option",
+          "UI Designs",
+          "Uninstall this App button"
+        ],
+        "fixes": [
+          "Removed Subtitle cleaner",
+          "Check Update Intent.",
+          "Dialog Random options",
+          "Log clear mechanism",
+          "Margins & Styling"
         ],
         "general": [
-          "Improved scanning reliability",
-          "Updated the storage overview interface",
-          "Improved handling of large directories"
+          "Note : I am not making beautify Animated UI as this will increase App size.",
+          "More Coming Soon +++..."
+        ]
+      }
+    },
+    "v1.6": {
+      "source": "server/changelog/old/v1.6",
+      "changes": {
+        "new": [
+          "UI Color Designs 🖌️"
+        ],
+        "fixes": [
+          "Cleaning mechanism",
+          "Non-Root log view/handler",
+          "Margins"
+        ],
+        "removed": [
+          "Suspended Daily Update",
+          "Suspended Settings page"
+        ]
+      }
+    },
+    "v1.7": {
+      "source": "server/changelog/old/v1.7",
+      "changes": {
+        "general": [
+          "This Version was Deleted by Developer for some Reasons."
+        ]
+      }
+    },
+    "v1.8": {
+      "source": "server/changelog/old/v1.8",
+      "changes": {
+        "new": [
+          "Introducing New Changelog Ui",
+          "Fix \"data/local/tmp\" folder option",
+          "Donate Option to keep this project Alive."
+        ],
+        "fixes": [
+          "Feedback Options",
+          "Cleaning Mechanism in Old Android version",
+          "Integration of commands",
+          "Removed v1.7 wastes"
+        ],
+        "general": [
+          "Updated: Bump version code to 2",
+          "Must see coming soon features",
+          "Please provide feedback or suggestion if you have any idea."
+        ]
+      }
+    },
+    "v1.9": {
+      "source": "server/changelog/old/v1.9",
+      "changes": {
+        "new": [
+          "Fstrim",
+          "Supports users options",
+          "Settings Implimentation [Hot]",
+          "Advance Features support",
+          "Battery calibration (unstable)",
+          "View used storage [Hot]",
+          "Support Android 5 to 13"
+        ],
+        "fixes": [
+          "Folder /data/local/tmp auto"
+        ],
+        "general": [
+          "Updated: Dynamic dalvik cleaner",
+          "Updated: Whatsapp cleaner advance",
+          "Updated: oat cleaner by versions"
+        ]
+      }
+    },
+    "v2.0": {
+      "source": "server/changelog/old/v2.0",
+      "changes": {
+        "new": [
+          "New UI",
+          "Introducing Premium Features",
+          "Whatsapp Tool",
+          "Restructured Root commands",
+          "Custom Cleaner",
+          "Multi-User Support",
+          "Used Storage view (Limited)",
+          "Help Option in Each Pages",
+          "Magisk Module Support (soon)"
+        ],
+        "fixes": [
+          "Deep cleaning at system level",
+          "About Dialog Information",
+          "Capital Letter Problem",
+          "Enhanced Delvik Cache clean",
+          "oat/vdex/odex cleaner",
+          "Bugs and Issues"
+        ],
+        "general": [
+          "Premium Restore option and premium code preserve",
+          "Fix Cleaning List",
+          "Updated Banners",
+          "Fix Custom cleaner Mechanism",
+          "prevent /data/local/tmp folder from clean by Easy cache wiper API."
+        ]
+      }
+    },
+    "v2.1": {
+      "source": "server/changelog/old/v2.1",
+      "changes": {
+        "new": [
+          "Import | Export Option in Custom Cleaner",
+          "oat/odex/vdex size view"
+        ],
+        "fixes": [
+          "Premium Page Opener",
+          "Text in custom cleaner",
+          "Delvik Cache size viewer",
+          "Removing directory bug in custom cleaner"
+        ],
+        "general": [
+          "Import & Export through Clipboard or File"
+        ]
+      }
+    },
+    "v2.2": {
+      "source": "server/changelog/old/v2.2",
+      "changes": {
+        "new": [
+          "Lucky Patcher Cleaner",
+          "Now showing more accurate tasking and toast For Every Task",
+          "Introducing Non-Root Cleaner",
+          "Daily Cleaner Enhanced +",
+          "oat(vdex/odex) Total size viewer",
+          "Introducing Cleaner Lite Helper"
+        ],
+        "fixes": [
+          "More option in custom directories selector",
+          "FsTrim Restructured with accurate reasoning & Tasking",
+          "Delvik cache mechanism"
+        ],
+        "general": [
+          "𝗪𝗼𝗿𝗸𝗶𝗻𝗴 𝟯𝗫 𝗙𝗮𝘀𝘁𝗲𝗿 𝗡𝗼𝘄",
+          "Now Unavailability or denied of root acess does not kill app instead it will show proper reason of error (if happen)",
+          "Custom patch & Modified App in Lucky patcher cleaner",
+          "Readd : Fix /data/local/tmp",
+          "WhatsApp cleaner now clears few cache files for All users",
+          "Removes Many bugs and performed improvements",
+          "Readd : Mount /data",
+          "Changed Backup Restore custom directory Mechanism"
+        ],
+        "removed": [
+          "Dropped Android 5 Support as Magisk Officially dropped for it",
+          "Removed list from custom cleaner popup but available in its settings",
+          "Dropped Terminal Support due to StandAlone App"
+        ]
+      }
+    },
+    "v2.3": {
+      "source": "server/changelog/old/v2.3",
+      "changes": {
+        "general": [
+          "The Changelog for this version is not Found in sever"
+        ]
+      }
+    },
+    "v2.4": {
+      "source": "server/changelog/old/v2.4",
+      "changes": {
+        "new": [
+          "Oat Size supports both MB/GB",
+          "Empty Folder Cleaner",
+          "OneTap Cleaner",
+          "Storage Viewer",
+          "Cache Trim Super Enhanced",
+          "Option Hider (Every Single folder naming 'Cache' or 'cache' with its contents will be cleared in one click from device Globally)",
+          "Empty Folder Output option",
+          "New directories for Log Cleaner,Internal Storage cleaner, etc.."
+        ],
+        "fixes": [
+          "Titles of Some Pages",
+          "Delvik cache Storage Viewer Mechanism",
+          "Error of The specified child already has a parent when using noRoot Cleaner than Root Cleaner.",
+          "Easy Cache Wiper API Dirs",
+          "Texts & Improvements"
+        ],
+        "general": [
+          "No Confirm option for Daily clean",
+          "No Need of Magisk Module",
+          "The App is Already Powerful",
+          "Bug Fixes & Improvements",
+          "Updated Coming Soon"
+        ],
+        "removed": [
+          "Removed Useless Root codes"
+        ]
+      }
+    },
+    "v2.5": {
+      "source": "server/changelog/old/v2.5",
+      "changes": {
+        "new": [
+          "Logs Cleaner Enhanced",
+          "Temporary Files Cleaner",
+          ".Nomedia Cleaner",
+          "Compatibility Checker"
+        ],
+        "fixes": [
+          "Empty Folder Cleaner",
+          "Some dialogs on custom font Devices",
+          "Cache Trim Enhance"
+        ],
+        "general": [
+          "Now Clears all Logs with extension '.log' Globally",
+          "Updated Many Directories",
+          "Updated OneTap Cleaner",
+          "Fix Bugs & Improvements",
+          "Update Help & Cleaning List",
+          "Currently this app don't support SD CARD Cleaner as it is removable storage & time consume process to make cleanable mechanism for this"
+        ],
+        "removed": [
+          "Suspended NoRoot Cleaner as This app mainly for Rooted Device"
+        ]
+      }
+    },
+    "v2.6": {
+      "source": "server/changelog/old/v2.6",
+      "changes": {
+        "new": [
+          "Modified versions of whatsapp Cleaner (Gbwhatsapp,Yowhatsapp,etc)",
+          "SeLinux Profile(Toolbox)",
+          "Introducing Dymanic Action",
+          "Custom Cleaner now supports /data directories",
+          "Split Status Cleaner",
+          "outputs of empty folder, temporary files, .nomedia cleaner"
+        ]
+      }
+    },
+    "v2.7": {
+      "source": "server/changelog/old/v2.7",
+      "changes": {
+        "new": [
+          "New Trial Mode"
+        ],
+        "fixes": [
+          "Layout Compatibility for All devices",
+          "bug fixes & Improvements"
+        ],
+        "general": [
+          "Dark Mode Supporting",
+          "Dynamic Action include Redeem code, Direct Action, Settings changer, commands etc...",
+          "Dalvik Enabler/Disabler by Dynamic Action for lower device",
+          "Old changelog shift to web",
+          "Restructured Purchase code generator and Premium Activator"
+        ]
+      }
+    },
+    "v2.8": {
+      "source": "server/changelog/old/v2.8",
+      "changes": {
+        "new": [
+          "Smart Clean (Customizable)",
+          "Multi-User EmptyFolder Cleaner",
+          "Theme Support now Available",
+          "Browser Cache Cleaner",
+          "Templates in Smart Cleaner",
+          "Introducing Custom Directory Hints"
+        ],
+        "fixes": [
+          "output of EmptyFolder Cleaner",
+          "Dynamic Action Acess Code"
+        ],
+        "general": [
+          "Smart Cleaner in place of .nomedia cleaner, and this is moved to Cleaner Toolbox",
+          "Updated java version 1.7>11",
+          "Updated Dexer from x to 8"
         ],
         "performance": [
-          "Optimized file scanning for large storage volumes",
-          "Reduced memory consumption during duplicate detection"
+          "Increased Overall Speed",
+          "Reduced App Size"
+        ],
+        "removed": [
+          "Suspended storage view on Android 11 below devices"
         ]
       }
     },
-    "v1.5.0": {
-      "date": "2026-09-01",
-      "channel": "stable",
-      "description": "Introduced the initial set of storage scanning and cleaning tools.",
+    "v2.9": {
+      "source": "server/changelog/old/v2.9",
       "changes": {
         "new": [
-          "Added the first storage scanning tool",
-          "Added support for scanning internal storage",
-          "Added a basic cleaning results screen",
-          "Added an option to cancel an active scan"
+          "Globally .nomedia Cleaner",
+          "New Custom Dirs Import Style"
         ],
         "fixes": [
-          "Fixed a crash when storage permission was denied",
-          "Fixed incorrect scan progress",
-          "Fixed an issue with returning to the dashboard during scanning"
+          "Custom Directories Hints",
+          "Temporary Files Cleaner Output",
+          "Texts & minor information",
+          "Notification checkbox in custom cleaner",
+          "Fstrim on Android 13",
+          "Bugs & Bot Intent issue"
         ],
         "general": [
-          "Improved initial application loading",
-          "Updated the basic dashboard design"
+          "Bash changed to 'sh' Shell scripting to support Almost All Devices",
+          "MultiUser EmptyFolder Cleaner now outputs 'user'",
+          "Premium Price are now fixed to 4$."
+        ],
+        "performance": [
+          "SpeedUp EmptyFolder Cleaner"
         ]
       }
     },
-    "v1.0.0": {
-      "date": "2026-08-15",
-      "channel": "stable",
-      "description": "The first release of Cleaner Royall.",
+    "v3.0": {
+      "source": "server/changelog/old/v3.0",
       "changes": {
         "new": [
-          "Introduced Cleaner Royall",
-          "Added the basic dashboard",
-          "Added a storage information screen",
-          "Added a simple file scanning feature",
-          "Added an application settings screen"
+          "Detect Android Version Option",
+          "Text Writer Animations",
+          "New Dialog UI",
+          "Introducing Dialog Icons: Mini Cleaner (10+ mods): Apps Data Cleaner",
+          "Extended Trial upto 6 Month",
+          "Permanent Premium Key support",
+          "Battery Calibrate revert check",
+          "Upgraded Storage Viewer"
         ],
         "fixes": [
-          "Fixed initial dashboard loading",
-          "Fixed an issue with displaying storage information"
+          "Outputs of EmptyFolder & Temp",
+          "Script in OneTap Cleaner",
+          "Remapped OneTap Cleaner",
+          "More Accurate output of Error",
+          "Layout of some buttons",
+          "Dynamic Action",
+          "Changelog viewer"
         ],
         "general": [
-          "Introduced the initial application interface",
-          "Added basic Android storage permission handling"
+          "Premium Upgrade & Fixes",
+          "Bugs Fixes & Improvements",
+          "Custom directory examples",
+          "logcat cleaner shifted from log cleaner to Mini cleaner"
+        ],
+        "performance": [
+          "Updated + SpeedUp Compatibility Checker"
+        ],
+        "removed": [
+          "Removed \"http-legacy-28.dex\""
+        ]
+      }
+    },
+    "v3.1": {
+      "source": "server/changelog/old/v3.1",
+      "changes": {
+        "fixes": [
+          "Hiding of 'Activate' Button is Settings",
+          ".thumbnails Cleaner in MiniCleaner",
+          "Minor Texts correction",
+          "Github Button in Update"
+        ],
+        "general": [
+          "Simplified Premium Purchase"
+        ],
+        "performance": [
+          "Reduced Resource Usage for Premium Users in Premium Activity"
+        ]
+      }
+    },
+    "v3.2": {
+      "source": "server/changelog/old/v3.2",
+      "changes": {
+        "new": [
+          "Brand New UI & Theme",
+          "Custom Color Support",
+          "Submit forums directly from app",
+          "Last Screenshot Remover - Smart Clean",
+          "gif cleaner - smart clean"
+        ],
+        "fixes": [
+          "dump log cleaner",
+          "texts & styles",
+          "some java code structure",
+          "bugs & Improvements"
+        ],
+        "general": [
+          "Upgraded info box in all option",
+          "Size calculation mechanism upgraded",
+          "Wiper API output",
+          "Integrated help & Cleaning list",
+          "Premium price reduced",
+          "Storage usage for some options in mini cleaner",
+          "Many colors given on Github wiki",
+          "Please purchase Premium & Help or Contribute app development"
+        ],
+        "performance": [
+          "Reduce Resource usage"
+        ],
+        "removed": [
+          "Suspended helper App"
+        ]
+      }
+    },
+    "v3.3": {
+      "source": "server/changelog/old/v3.3",
+      "changes": {
+        "new": [
+          "Introducing Systemless auto cleaning Module.",
+          "Full Featured Auto Cleaner Module, Like changable interval & Patches.",
+          "WhatsApp - Full Featured Cleaner, 30+ Options",
+          "Telegram - Full Featured Cleaner",
+          "Directory Manager - Custom Cleaner",
+          "Introducing PreSets in Custom Cleaner",
+          "Backup & Restore PreSets in Custom Cleaner",
+          "Clean + Copy + Undo in Directory Manager - Custom Cleaner",
+          "Pro Hints Every 4 Second - in Some Pages",
+          "Custom Path Support - Smart Cleaner",
+          "Smart Cleaner - UI upgrade",
+          "Smart Cleaner - save & use custom items later for CleanUp",
+          "Introduction Dialog Changes",
+          "Size Calculation Mechanism Upgraded to Support All Android Versions",
+          "Updated - $INT Storage directories"
+        ],
+        "fixes": [
+          "Fstrim for Android 14",
+          "Compatibility button + Its texts + Enhanced + SpeedUp & Prevent multiple tap while checking",
+          "Header themes in some pages",
+          "Wiper API Cleaner - Output",
+          "Letter 'B' showing in some option in mini cleaner",
+          "Texts & Minor Improvements",
+          "Logs Cleaner for Multiple Users",
+          "Fonts & Styles"
+        ],
+        "general": [
+          "Changes Backup & Restore Mechanism for Custom Directories. Please Backup your Directories again with this version as old backups are no longer supported.",
+          "Now you can use /data/user_de directories in Custom Cleaner",
+          "Module supports Magisk & KernalSU ROOT"
+        ],
+        "removed": [
+          "Removed Android version Selector - No Need: Oat Size calculation Mechanism Has been Changed",
+          "Suspended Alternate method from Empty Folder Cleaner as it is now dynamically integrated & auto switchable",
+          "Removed .Nomedia cleaner from OneTap Cleaner (user Reported)"
+        ]
+      }
+    },
+    "v3.4": {
+      "source": "server/changelog/old/v3.4",
+      "changes": {
+        "new": [
+          "New Name, Package Name, Signature."
+        ],
+        "general": [
+          "Premium user can Activate Premium again by old Permanent Key or by Restore."
+        ]
+      }
+    },
+    "v3.5": {
+      "source": "server/changelog/old/v3.5",
+      "changes": {
+        "new": [
+          "New Source code is now available on Github"
+        ],
+        "general": [
+          "In-app update Checker"
+        ],
+        "performance": [
+          "Reduced App size"
+        ],
+        "security": [
+          "Enhanced Security"
+        ]
+      }
+    },
+    "v3.6": {
+      "source": "server/changelog/old/v3.6",
+      "changes": {
+        "new": [
+          "Last Download Cleaner",
+          "Remapped Last Screenshot Cleaner",
+          "Toast & Logs Disabler - Magisk",
+          "Magisk - Compatibility Checker",
+          "DCIM/.global trash Cleaner - MiUi - $INT Cleaner",
+          "Last Photo - Smart Cleaner",
+          "supports 30 min - Module",
+          "10+ More $INT Directories for CleanUp",
+          "Support for Deleted item in MiUi for Higher Android versions"
+        ],
+        "fixes": [
+          "Few Text & Spellings",
+          "Icons in Module",
+          "Last Screenshot Cleaner",
+          "Feedback Forums",
+          "'Auto Record log' enables sometime even if not enabled manually",
+          "10+ Auto Cleaner Module bugs"
+        ],
+        "general": [
+          "Improved Compatibility Checker",
+          "[ upto 30 ]Limited Action Record for Module",
+          "Same 10+ $INT Directories for Multi-User Storage Cleaner",
+          "Note : If you exprience Blink issue in any Activity of the app than simply Disable Logs & Notification option for this App from Magisk or KernalSU Manager"
+        ],
+        "performance": [
+          "Reduced Resources"
+        ]
+      }
+    },
+    "v3.7": {
+      "source": "server/changelog/old/v3.7",
+      "changes": {
+        "new": [
+          "Full Java Codes Refactored",
+          "Enhanced Cache Trimmer",
+          "Easy Wiper API info help",
+          "Confimation in Template - Smart Cleaner",
+          "Changelog UI Upgrade",
+          "Faster OneTap Option Get on Open",
+          "Fast & New Update Checker Mechanism",
+          "Update Checker - Update Changelog Provider",
+          "Cache trim is now in free version instead logs cleaner",
+          "Online Premium & Trial Activator",
+          "New Module Dynamic & Stable Mechanism",
+          "Cache Partition now integrated in Cache Trimmer",
+          "Module Cleaner Patch Manager [offline]",
+          "/data/system/graphicsstats Integrated in Cache Trim",
+          "/data/system/package_cache/* Integrated in Cache Trim",
+          "New Feedback Forum (Json) Method",
+          "New Forum Submitter API Key"
+        ],
+        "fixes": [
+          "Proper Error Output",
+          "Module - 30m not disabling on uninstall module",
+          "Icons placements",
+          "Feedback - Submissions viewer",
+          "Text Spellings & Margins",
+          "Bug id: 20965 (Refer to Tg Group)",
+          "Many bugs & Improvements",
+          "Telegram Group opener in Feedback Page",
+          "Custom Cleaner Name or known bug fixed",
+          "All Theme issues & Theme Stability"
+        ],
+        "general": [
+          "Fstrim Proper Instructions",
+          "Selectable Changelog",
+          "Battery Calibrate Revert Status Direct visible",
+          "Github Issues integrated in Feedback Page",
+          "Submit directory Integrated in Feedback Page",
+          "Custom Cleaner Mechanism Upgraded",
+          "Custom Cleaner Templates - Remapped",
+          "Please use Migrate Option Once in Custom Cleaner to upgrade your pre-saved directories with v3.7",
+          "Module & Custom Cleaner are now stable from beta.",
+          "Some devices not shows proper size but supports Cleaning. if some options always showing 0KB than you may still need to clean them Regularly."
+        ],
+        "performance": [
+          "SpeedUp Compatibility Checker",
+          "Reduced App Size."
+        ],
+        "removed": [
+          "Removed useless java codes",
+          "Suspended update check using Telegram bot API"
+        ]
+      }
+    },
+    "v3.8": {
+      "source": "server/changelog/old/v3.8",
+      "changes": {
+        "fixes": [
+          "Id 12316, 20965, 85467 & 58876",
+          "new payment method : Telegram stars",
+          "suspended google play code payment due to country issue",
+          "minor bugs & improvements"
+        ]
+      }
+    },
+    "v3.9": {
+      "source": "server/changelog/old/v3.9",
+      "changes": {
+        "new": [
+          "Xposed Module Integration",
+          "Clears All types of Cache of Scoped Apps when they launch or started.",
+          "Xposed Framework Initial Support"
+        ]
+      }
+    },
+    "v4.2 + v4.1 + v4.0": {
+      "source": "server/changelog/old/v4.2 + v4.1 + v4.0",
+      "changes": {
+        "new": [
+          "All Cleaner option in custom cleaner Activity",
+          "Initial RAM Booster Support",
+          "Xposed Module Integration",
+          "Clears All types of Cache of Scoped Apps when they launch or started.",
+          "Xposed Framework Initial Support"
+        ],
+        "fixes": [
+          "Fix Sign Problem",
+          "Fix Telegram group link in Premium Forum",
+          "Fix The lag issue in Cache Trimmer",
+          "Fix Minor bugs & Improvements",
+          "Fix Xposed Related Problems"
+        ],
+        "general": [
+          "SpeedUp Enhanced Cache Cleaner",
+          "Auto cleaning Module version Updated to v2.5"
+        ]
+      }
+    },
+    "v4.3": {
+      "source": "server/changelog/old/v4.3",
+      "changes": {
+        "new": [
+          "Fs-Trim All partitions",
+          "Now Auto Uses Busybox binaries from Magisk/KernalSU/APatch",
+          "Extra powered Cache Cleaner"
+        ],
+        "fixes": [
+          "Fix Exact Error Output",
+          "Fix Almost All Fs-Trim compatibility issues",
+          "Fix Minor bugs & improvements",
+          "Fix oat cleaner for some devices",
+          "Fix cache cleaner lag issue in OneTap"
+        ],
+        "general": [
+          "Minor text Adjustments"
+        ]
+      }
+    },
+    "v4.4": {
+      "source": "server/changelog/old/v4.4",
+      "changes": {
+        "new": [
+          "New Feedback & Premium API + Mechanism",
+          "Introducing Enhanced Logs Cleaner",
+          "Dev log Cleaner",
+          "WLan log Cleaner",
+          "Thermal Logs Cleaner",
+          "Cache Wiper API added Resource Cache Cleaner (no output for it), Pictures Thumbnails.",
+          "Logs Cleaner is now free to use until trial ends",
+          "Introducing Full Featured Dynamic Shell & Actions",
+          "SE-Linux Help info button",
+          "Direct Report submit for unexpected crash",
+          "Storage Usage - Remapped; now Stable",
+          "BGMI Toolbox - Requested by user",
+          "Check all type of forum status directly from app",
+          "Personal Action - Dynamic Action - An Action Allowed to specific users personally"
+        ],
+        "fixes": [
+          "Enhanced Cache Cleaner (If you are using systemless module, please re-enable Cache cleaner option)",
+          "ANR, App Not Responding Error",
+          "Music folder selector in Custom Cleaner",
+          "Exact Server Error",
+          "Smart Cleaner Package bug",
+          "Oat size viewer on some non permissive devices",
+          "UiD generator on non permissive devices",
+          "MiniCleaner Storage calculation + Reduced Resource usage",
+          "Custom Cleaner Restore - Invalid json problem"
+        ],
+        "general": [
+          "Restructured Root Shell + Enhanced Functionality",
+          "What is Online Mode? A = You can get updated Cleaning patches & directories on every usage",
+          "Logs, Cache, Wiper API, Temp Cleaners are now support Online Mode",
+          "Resource-Cache in /data is now cleanable in Cache Cleaner & Cache Wiper API with /dev/null",
+          "Online Mode is placed at Optimizer place; Optimizer is not made yet and will be placed somewhere when it comes",
+          "/storage/emulated/0/.picker_transcoded Cleaner in $INT cleaner + Multi$INT Cleaner",
+          "$INT + $M-INT Cleaners now supports online mode",
+          "Xposed version is now Stable - v82 (Legacy module to Stable)",
+          "Increased Trial Limit to 52 + 52 days",
+          "Some buttons Re-Styled",
+          "Storage Usage now uses one root shell to calculate all sizes instead of multiple",
+          "Cleaning codes can run for up to 20 seconds without lag or crash; then exit the process",
+          "Compatibility checker now uses online mode automatically when internet is available",
+          "Due to large amount of work, remaining upcoming features shifted for update v4.5"
+        ],
+        "performance": [
+          "ReMapped Compatibility checker + Reduced Resource Usage"
+        ],
+        "removed": [
+          "Suspended Dynamic Action as this is now integrated in Dynamic Shell",
+          "Suspended Migrate Option in Custom Cleaner",
+          "Suspended .nomedia Cleaner (shifted to Dynamic shell for anyone who still wants to use it)"
+        ]
+      }
+    },
+    "v4.5": {
+      "source": "server/changelog/old/v4.5",
+      "changes": {
+        "new": [
+          "Resource-Cache cleaner is now available in Dynamic Shell for those who still want to use it"
+        ],
+        "fixes": [
+          "Crash Error in some devices"
+        ],
+        "general": [
+          "Please Re-enable Cache Cleaner option in Module section [Must]"
+        ],
+        "removed": [
+          "Removed /data/resource-cache; it was causing some issue on some devices"
         ]
       }
     }
