@@ -7,7 +7,7 @@
     "website": "",
     "developer": "Araaf Royall"
   },
-  "LatestVersion": "v4.7",
+  "LatestVersion": "v4.8",
   "downloadUrl": "https://github.com/AraafRoyall/Cleaner-Royall/releases/download/Cleaner-Royall-v4.8/Cleaner.Royall.v4.8.apk",
   "upcomingEnabled": true,
   "upcomingUrl": "UpcomingFeaturesViewer.html",
@@ -38,7 +38,7 @@
       "changes": {
         "new": [
           "New : Feedback Option",
-          "New : Easy cache wiper API closes #425",
+          "New : Easy cache wiper API closes",
           "New : Option to mount /data"
         ]
       },
@@ -719,6 +719,7 @@
       "channel": "stable"
     },
     "v4.3": {
+      "date": "Date not available",
       "source": "server/changelog/old/v4.3",
       "changes": {
         "new": [
@@ -740,6 +741,7 @@
       "channel": "stable"
     },
     "v4.4": {
+      "date": "12-03-2025",
       "source": "server/changelog/old/v4.4",
       "changes": {
         "new": [
@@ -797,6 +799,7 @@
       "channel": "stable"
     },
     "v4.5": {
+      "date": "28-07-2025",
       "source": "server/changelog/old/v4.5",
       "changes": {
         "new": [
@@ -814,16 +817,18 @@
       },
       "channel": "stable"
     },
-    "v4.7": {
+    "v4.8": {
+      "date": "29-05-2026",
       "channel": "stable",
-      "description": "Minor fix.",
+      "description": "Latest Stable Release, after it The Full App will be Refactored",
       "changes": {
         "fixes": [
           "Minor fix"
         ]
       }
     },
-    "v4.6": {
+    "v4.6 + v4.7": {
+      "date": "29-07-2025",
       "channel": "stable",
       "description": "A small update with bug fixes and improvements.",
       "changes": {
