@@ -9,24 +9,7 @@
   },
   "LatestVersion": "v2.1.0",
   "upcomingEnabled": true,
-  "upcoming": {
-    "title": "Upcoming features",
-    "description": "Ideas planned for future updates. These items may change as development progresses.",
-    "changes": {
-      "new": [
-        "Add scheduled cleaning reminders",
-        "Add more filters for storage and file scans",
-        "Add a detailed cleaning report with before-and-after totals"
-      ],
-      "improved": [
-        "Make large scans easier to monitor with clearer progress details",
-        "Add more customization options for the dashboard"
-      ],
-      "general": [
-        "Continue refining accessibility and small-screen layouts"
-      ]
-    }
-  },
+  "upcomingUrl": "UpcomingFeaturesViewer.html",
   "releases": {
     "v2.1.0": {
       "date": "2026-10-16",
