@@ -8,6 +8,7 @@
     "developer": "Araaf Royall"
   },
   "LatestVersion": "v2.1.0",
+  "upcomingEnabled": true,
   "upcoming": {
     "title": "Upcoming features",
     "description": "Ideas planned for future updates. These items may change as development progresses.",
