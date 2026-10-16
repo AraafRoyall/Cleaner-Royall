@@ -7,64 +7,19 @@
     "website": "",
     "developer": "Araaf Royall"
   },
-  "LatestVersion": "v2.1.0",
+  "LatestVersion": "v4.7",
   "downloadUrl": "https://github.com/AraafRoyall/Cleaner-Royall/releases/download/Cleaner-Royall-v4.8/Cleaner.Royall.v4.8.apk",
   "upcomingEnabled": true,
   "upcomingUrl": "UpcomingFeaturesViewer.html",
   "releases": {
-    "v2.1.0": {
-      "date": "2026-10-16",
-      "channel": "stable",
-      "description": "A better cleaning experience with new tools, performance improvements, and important fixes.",
-      "changes": {
-        "new": [
-          "Added a redesigned dashboard",
-          "Added quick cleaning actions",
-          "Added a new storage analysis screen",
-          "Added a large file finder",
-          "Added support for exporting cleaning reports",
-          "Added a confirmation dialog before deleting app groups",
-          "Added customizable dashboard options",
-          "Added a new changelog viewer"
-        ],
-        "fixes": [
-          "Fixed incorrect storage calculations",
-          "Fixed a crash when opening the cleaner without storage permission",
-          "Fixed an issue with app icons not loading correctly",
-          "Fixed incorrect file counts during duplicate detection",
-          "Fixed a layout issue on smaller screens",
-          "Fixed an issue where cancelled scans continued running",
-          "Fixed incorrect progress values during cache scanning",
-          "Fixed an issue with refreshing the application list"
-        ],
-        "general": [
-          "Improved application startup performance",
-          "Updated the dashboard layout",
-          "Reduced unnecessary background processing",
-          "Improved error messages during file scanning",
-          "Optimized memory usage during large scans",
-          "Improved accessibility of interactive elements"
-        ],
-        "security": [
-          "Improved validation of file operation requests",
-          "Added additional checks before destructive operations"
-        ],
-        "performance": [
-          "Optimized scanning of large directories",
-          "Reduced unnecessary file system operations"
-        ],
-        "removed": [
-          "Removed an obsolete cleaning option"
-        ]
-      }
-    },
     "v1.0": {
       "source": "server/changelog/old/v1.0",
       "changes": {
         "new": [
           "Initial Version of Cleaner Royall by AraafRoyall"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v1.1": {
       "source": "server/changelog/old/v1.1",
@@ -75,7 +30,8 @@
         "fixes": [
           "User Reported bugs"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v1.2": {
       "source": "server/changelog/old/v1.2",
@@ -85,7 +41,8 @@
           "New : Easy cache wiper API",
           "New : Option to mount /data"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v1.3": {
       "source": "server/changelog/old/v1.3",
@@ -95,7 +52,8 @@
           "New : Daily Cleaner",
           "New : oat Cleaner"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v1.4": {
       "source": "server/changelog/old/v1.4",
@@ -116,7 +74,8 @@
           "Fonts in About Dialog.",
           "some other improvements."
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v1.5": {
       "source": "server/changelog/old/v1.5",
@@ -138,7 +97,8 @@
           "Note : I am not making beautify Animated UI as this will increase App size.",
           "More Coming Soon +++..."
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v1.6": {
       "source": "server/changelog/old/v1.6",
@@ -155,7 +115,8 @@
           "Suspended Daily Update",
           "Suspended Settings page"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v1.7": {
       "source": "server/changelog/old/v1.7",
@@ -163,7 +124,8 @@
         "general": [
           "This Version was Deleted by Developer for some Reasons."
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v1.8": {
       "source": "server/changelog/old/v1.8",
@@ -184,7 +146,8 @@
           "Must see coming soon features",
           "Please provide feedback or suggestion if you have any idea."
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v1.9": {
       "source": "server/changelog/old/v1.9",
@@ -206,7 +169,8 @@
           "Updated: Whatsapp cleaner advance",
           "Updated: oat cleaner by versions"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v2.0": {
       "source": "server/changelog/old/v2.0",
@@ -237,7 +201,8 @@
           "Fix Custom cleaner Mechanism",
           "prevent /data/local/tmp folder from clean by Easy cache wiper API."
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v2.1": {
       "source": "server/changelog/old/v2.1",
@@ -255,7 +220,8 @@
         "general": [
           "Import & Export through Clipboard or File"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v2.2": {
       "source": "server/changelog/old/v2.2",
@@ -288,7 +254,8 @@
           "Removed list from custom cleaner popup but available in its settings",
           "Dropped Terminal Support due to StandAlone App"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v2.3": {
       "source": "server/changelog/old/v2.3",
@@ -296,7 +263,8 @@
         "general": [
           "The Changelog for this version is not Found in sever"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v2.4": {
       "source": "server/changelog/old/v2.4",
@@ -328,7 +296,8 @@
         "removed": [
           "Removed Useless Root codes"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v2.5": {
       "source": "server/changelog/old/v2.5",
@@ -355,7 +324,8 @@
         "removed": [
           "Suspended NoRoot Cleaner as This app mainly for Rooted Device"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v2.6": {
       "source": "server/changelog/old/v2.6",
@@ -368,7 +338,8 @@
           "Split Status Cleaner",
           "outputs of empty folder, temporary files, .nomedia cleaner"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v2.7": {
       "source": "server/changelog/old/v2.7",
@@ -387,7 +358,8 @@
           "Old changelog shift to web",
           "Restructured Purchase code generator and Premium Activator"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v2.8": {
       "source": "server/changelog/old/v2.8",
@@ -416,7 +388,8 @@
         "removed": [
           "Suspended storage view on Android 11 below devices"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v2.9": {
       "source": "server/changelog/old/v2.9",
@@ -441,7 +414,8 @@
         "performance": [
           "SpeedUp EmptyFolder Cleaner"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v3.0": {
       "source": "server/changelog/old/v3.0",
@@ -477,7 +451,8 @@
         "removed": [
           "Removed \"http-legacy-28.dex\""
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v3.1": {
       "source": "server/changelog/old/v3.1",
@@ -494,7 +469,8 @@
         "performance": [
           "Reduced Resource Usage for Premium Users in Premium Activity"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v3.2": {
       "source": "server/changelog/old/v3.2",
@@ -528,7 +504,8 @@
         "removed": [
           "Suspended helper App"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v3.3": {
       "source": "server/changelog/old/v3.3",
@@ -570,7 +547,8 @@
           "Suspended Alternate method from Empty Folder Cleaner as it is now dynamically integrated & auto switchable",
           "Removed .Nomedia cleaner from OneTap Cleaner (user Reported)"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v3.4": {
       "source": "server/changelog/old/v3.4",
@@ -581,7 +559,8 @@
         "general": [
           "Premium user can Activate Premium again by old Permanent Key or by Restore."
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v3.5": {
       "source": "server/changelog/old/v3.5",
@@ -598,7 +577,8 @@
         "security": [
           "Enhanced Security"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v3.6": {
       "source": "server/changelog/old/v3.6",
@@ -631,7 +611,8 @@
         "performance": [
           "Reduced Resources"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v3.7": {
       "source": "server/changelog/old/v3.7",
@@ -687,7 +668,8 @@
           "Removed useless java codes",
           "Suspended update check using Telegram bot API"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v3.8": {
       "source": "server/changelog/old/v3.8",
@@ -698,7 +680,8 @@
           "suspended google play code payment due to country issue",
           "minor bugs & improvements"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v3.9": {
       "source": "server/changelog/old/v3.9",
@@ -708,7 +691,8 @@
           "Clears All types of Cache of Scoped Apps when they launch or started.",
           "Xposed Framework Initial Support"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v4.2 + v4.1 + v4.0": {
       "source": "server/changelog/old/v4.2 + v4.1 + v4.0",
@@ -731,7 +715,8 @@
           "SpeedUp Enhanced Cache Cleaner",
           "Auto cleaning Module version Updated to v2.5"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v4.3": {
       "source": "server/changelog/old/v4.3",
@@ -751,7 +736,8 @@
         "general": [
           "Minor text Adjustments"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v4.4": {
       "source": "server/changelog/old/v4.4",
@@ -807,7 +793,8 @@
           "Suspended Migrate Option in Custom Cleaner",
           "Suspended .nomedia Cleaner (shifted to Dynamic shell for anyone who still wants to use it)"
         ]
-      }
+      },
+      "channel": "stable"
     },
     "v4.5": {
       "source": "server/changelog/old/v4.5",
@@ -823,6 +810,36 @@
         ],
         "removed": [
           "Removed /data/resource-cache; it was causing some issue on some devices"
+        ]
+      },
+      "channel": "stable"
+    },
+    "v4.7": {
+      "channel": "stable",
+      "description": "Minor fix.",
+      "changes": {
+        "fixes": [
+          "Minor fix"
+        ]
+      }
+    },
+    "v4.6": {
+      "channel": "stable",
+      "description": "A small update with bug fixes and improvements.",
+      "changes": {
+        "general": [
+          "This is a small update with some bugs fixed."
+        ],
+        "new": [
+          "Stream Closed errors now show the exact error output.",
+          "Increased maximum cleaning time to 30 seconds. If it exceeds the limit, try cleaning the remaining items again."
+        ],
+        "fixes": [
+          "Fixed Crash Report Sender.",
+          "Fixed Online Cleaner premium detection.",
+          "Fixed the Dalvik Cache option in OneTap.",
+          "Fixed minor text in Dynamic Action.",
+          "Fixed minor texts and improvements."
         ]
       }
     }
