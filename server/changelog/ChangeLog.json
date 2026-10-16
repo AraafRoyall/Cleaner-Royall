@@ -1,15 +1,31 @@
 {
   "app": {
     "name": "Cleaner Royall",
-    "description": "Sample ChangeLog Viewer",
+    "description": "Changes for Cleaner Royall",
     "icon": "https://raw.githubusercontent.com/AraafRoyall/Cleaner-Royall/main/assets/icon.png",
     "repository": "https://github.com/AraafRoyall/Cleaner-Royall",
     "website": "",
     "developer": "Araaf Royall"
   },
-
   "LatestVersion": "v2.1.0",
-
+  "upcoming": {
+    "title": "Upcoming features",
+    "description": "Ideas planned for future updates. These items may change as development progresses.",
+    "changes": {
+      "new": [
+        "Add scheduled cleaning reminders",
+        "Add more filters for storage and file scans",
+        "Add a detailed cleaning report with before-and-after totals"
+      ],
+      "improved": [
+        "Make large scans easier to monitor with clearer progress details",
+        "Add more customization options for the dashboard"
+      ],
+      "general": [
+        "Continue refining accessibility and small-screen layouts"
+      ]
+    }
+  },
   "releases": {
     "v2.1.0": {
       "date": "2026-10-16",
@@ -57,7 +73,6 @@
         ]
       }
     },
-
     "v2.0.0": {
       "date": "2026-10-10",
       "channel": "stable",
@@ -93,7 +108,6 @@
         ]
       }
     },
-
     "v1.9.0": {
       "date": "2026-10-05",
       "channel": "stable",
@@ -125,7 +139,6 @@
         ]
       }
     },
-
     "v1.5.0": {
       "date": "2026-09-01",
       "channel": "stable",
@@ -148,7 +161,6 @@
         ]
       }
     },
-
     "v1.0.0": {
       "date": "2026-08-15",
       "channel": "stable",
