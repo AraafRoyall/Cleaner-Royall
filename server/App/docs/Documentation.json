@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "app": {
+    "name": "Cleaner Royall",
+    "title": "Documentation",
+    "description": "Guides, answers and technical references in one place.",
+    "logo": "https://raw.githubusercontent.com/AraafRoyall/Cleaner-Royall/main/assets/logo.png",
+    "imagesBaseUrl": "https://raw.githubusercontent.com/AraafRoyall/Cleaner-Royall/main/assets/Screenshots/"
+  },
+  "categories": [
+    {
+      "id": "general",
+      "title": "General",
+      "description": "Getting started and common questions",
+      "icon": "help",
+      "theme": "blue",
+      "articles": [
+        {
+          "id": "getting-started",
+          "title": "Where should I start?",
+          "summary": "A quick introduction to finding and using the documentation.",
+          "content": "Welcome to **Cleaner Royall Documentation**. Use the search bar to find answers, or choose a category to narrow the list.\n\nStart by reading the description of each cleaning option and enable only the options you understand.\n\n> Tip: Check the selected options before starting a cleaning operation.",
+          "updated": "2026-09-17"
+        },
+        {
+          "id": "search",
+          "title": "How does search work?",
+          "summary": "Find articles by title, summary, category, or content.",
+          "content": "Enter a word or phrase in the search field. Search checks the article **title, summary, category, and content**.\n\nChoose a category to narrow the results. Select **View all** or the bottom **All articles** action to clear the current filters.",
+          "updated": "2026-10-17"
+        },
+        {
+          "id": "markdown-formatting",
+          "title": "Supported text formatting",
+          "summary": "Examples of the Markdown formatting supported by the viewer.",
+          "content": "## Headings and text\n\nUse **bold text**, *italic text*, `inline code`, links like [OpenAI](https://openai.com), simple lists, quotes, and horizontal dividers.\n\n### Lists\n\n- First item\n- Second item\n\n1. First step\n2. Second step\n\n> A short note can be written as a quote.\n\n## Code examples\n\nUse a fenced code block to display copyable code:\n\n```bash\nprintf '%s\\n' 'Hello from Cleaner Royall'\n```",
+          "updated": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "id": "premium",
+      "title": "Premium",
+      "description": "Premium features and troubleshooting",
+      "icon": "crown",
+      "theme": "amber",
+      "articles": [
+        {
+          "id": "premium-overview",
+          "title": "What should the Premium article explain?",
+          "summary": "A template for verified Premium information.",
+          "content": "Use this article to explain the currently supported Premium features, activation process, eligibility, and troubleshooting.\n\nReplace this sample with verified product information before publishing. Avoid adding pricing, renewal, or access promises unless they match the actual app behavior.",
+          "updated": "2026-10-17"
+        },
+        {
+          "id": "premium-troubleshooting",
+          "title": "Premium troubleshooting",
+          "summary": "A suggested structure for a support guide.",
+          "content": "## If Premium is not working\n\n1. Record the message shown by the app.\n2. Check that the device has network access if the feature requires it.\n3. Retry the relevant action and note whether the result changes.\n4. Share only the diagnostic details required by your support process. Do not share passwords, tokens, or other secrets.\n\nUpdate these steps to reflect the real Premium activation flow.",
+          "updated": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "id": "cleaner-model",
+      "title": "Cleaner Model",
+      "description": "Data structures and technical usage",
+      "icon": "code",
+      "theme": "teal",
+      "articles": [
+        {
+          "id": "cleaner-model-json",
+          "title": "JSON data example",
+          "summary": "A simple example of a formatted JSON code block.",
+          "content": "Use a fenced code block for structured data. The viewer formats the block and provides a **Copy** action.\n\n```json\n{\n  \"name\": \"Example\",\n  \"enabled\": true,\n  \"items\": [\"one\", \"two\"]\n}\n```\n\nExplain required fields, optional fields, and default values near the example.",
+          "updated": "2026-10-17"
+        },
+        {
+          "id": "cleaner-model-java",
+          "title": "Java code example",
+          "summary": "A Java snippet shown in a copyable code panel.",
+          "content": "Use a fenced code block with the language name to create a copyable code panel.\n\n```java\npublic final class ExampleJava {\n    private ExampleJava() {}\n\n    public static String greet(String name) {\n        return \"Hello, \" + name + \"!\";\n    }\n}\n```\n\nInclude required imports, Java version, and dependencies when needed.",
+          "updated": "2026-10-17"
+        },
+        {
+          "id": "cleaner-model-shell",
+          "title": "Shell command example",
+          "summary": "A sample shell command in a copyable code panel.",
+          "content": "Explain what a command does and mention prerequisites before asking users to run it.\n\n```bash\nprintf '%s\\n' 'Replace this with a documented command'\n```\n\nClearly warn readers before commands that need elevated privileges or can change or delete data.",
+          "updated": "2026-10-17"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "searchEnabled": true,
+    "showUpdatedDate": true
+  }
+}
